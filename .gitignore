@@ -1,0 +1,13 @@
+# Arquivos temporários do Office
+~$*
+*.tmp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Nunca versionar dumps de banco ou dados reais de cliente
+*.backup
+*.dump
+*.sql.gz
+dados-reais/
