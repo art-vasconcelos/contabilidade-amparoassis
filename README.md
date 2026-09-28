@@ -30,8 +30,8 @@ Material interno fica em **Markdown**.
 |---|---|---|---|---|
 | 1 | Estrutura de pastas + README | Markdown | raiz | ✅ Pronto |
 | 2 | Proposta geral de serviços | HTML → PDF | `03-propostas/servicos-gerais/` | ✅ Pronto |
-| 3 | Proposta do projeto de automação com IA | HTML → PDF | `03-propostas/projeto-automacao-ia/` | 🟡 Em revisão |
-| 4 | Formulário de levantamento de processos | Excel | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |
+| 3 | Proposta do projeto de automação com IA | HTML → PDF | `03-propostas/projeto-automacao-ia/` | ✅ Pronto |
+| 4 | Formulário de levantamento de processos | Excel | `03-propostas/projeto-automacao-ia/` | 🟡 Em revisão |
 | 5 | Texto do e-mail de envio | Markdown | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |
 | 6 | Histórico dos atendimentos | Markdown | `01-historico/` | ⏳ Depois |
 | 7 | Plano de backup e monitoramento | Markdown + scripts | `02-tecnico/backup-monitoramento/` | ⏳ Depois |
