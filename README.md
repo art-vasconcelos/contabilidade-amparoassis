@@ -35,7 +35,7 @@ Material interno fica em **Markdown**.
 | 5 | Texto do e-mail de envio | Markdown | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |
 | 6 | Histórico dos atendimentos | Markdown | `01-historico/` | ⏳ Depois |
 | 7 | Plano de backup e monitoramento | Markdown + scripts | `02-tecnico/backup-monitoramento/` | ⏳ Depois |
-| 8 | Cartilha para os clientes da Amparo | HTML → PDF | `04-cartilhas/clientes-amparo/` | ⏳ Depois |
+| 8 | Cartilha para os clientes da Amparo | HTML → PDF | `04-cartilhas/clientes-amparo/` | 🟡 Em revisão |
 
 ---
 
