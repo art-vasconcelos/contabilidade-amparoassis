@@ -17,14 +17,17 @@
 | Valor por hora (remoto) | R$ 50,00 |
 | Atendimento | Remoto via AnyDesk; presencial quando necessário (Artur mora perto) |
 | Valor por hora (presencial) | R$ 50,00 |
+| Manutenção mensal | R$ 100 a R$ 250/mês (2 a 5 h) · mínimo R$ 100 em mês só de conferência |
 | Projetos | Orçados e enviados para aprovação antes de qualquer execução |
+| Pagamento | Pix (histórico); nota fiscal disponível quando necessário |
+| Backup em nuvem | As responsáveis já demonstraram interesse em uma cópia na nuvem |
 
 ## Contexto
 
 - O suporte técnico era feito por um profissional de São Paulo. A Amparo quer passar esse
   suporte para o Artur por proximidade e para evitar custo de deslocamento.
-- A Natalia pretende repassar serviços do Artur para os clientes dela (pequenos comércios):
-  sites, análise de dados e aplicativos.
+- A Natalia pretende repassar serviços do Artur para os clientes dela: sites, análise de dados
+  e aplicativos. Nos documentos, não tratar esses clientes como "pequenos comércios".
 - Interesse atual: automatizar processos da contabilidade usando agentes de IA ou automações
   mais simples (n8n, rotinas na própria máquina).
 
@@ -51,3 +54,11 @@
    do sistema da folha; registrar e não mexer sem a aprovação dele.
 
 Detalhes de cada atendimento: ver `01-historico/`.
+
+## Fora do escopo (decisão do Artur)
+
+- **Conferência e conciliação contábil** como responsabilidade do Artur. Pode ser automatizada
+  como projeto, mas a responsabilidade pela conferência continua com o escritório.
+- **Consultoria de uso do sistema da folha.** O Artur faz a ponte técnica com o fornecedor
+  quando necessário.
+- **Cadastro de usuários**: o escritório não tem essa necessidade.

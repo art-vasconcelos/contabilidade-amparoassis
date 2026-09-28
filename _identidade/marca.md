@@ -18,7 +18,9 @@ Fonte única de nome e contatos. Se algo mudar aqui, atualizar os documentos ger
 |---|---|
 | Hora – atendimento remoto | R$ 50,00/hora (combinado com a Amparo) · demais clientes: [DEFINIR] |
 | Hora – atendimento presencial | R$ 50,00/hora (combinado com a Amparo) |
-| Manutenção mensal | [DEFINIR] |
+| Manutenção mensal | R$ 100 a R$ 250/mês (média de 2 a 5 h a R$ 50). Mínimo R$ 100 em mês só de conferência; acima de 5 h, horas extras a R$ 50 |
+| Prazo de resposta | No máximo algumas horas |
+| Pagamento | Pix; emissão de nota fiscal quando necessário |
 | Projeto fechado | Orçado caso a caso, executado só após aprovação |
 
 ## Padrão visual
