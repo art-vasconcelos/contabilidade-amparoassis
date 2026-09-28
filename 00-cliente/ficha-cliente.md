@@ -16,7 +16,7 @@
 |---|---|
 | Valor por hora (remoto) | R$ 50,00 |
 | Atendimento | Remoto via AnyDesk; presencial quando necessário (Artur mora perto) |
-| Valor por hora (presencial) | [DEFINIR] |
+| Valor por hora (presencial) | R$ 50,00 |
 | Projetos | Orçados e enviados para aprovação antes de qualquer execução |
 
 ## Contexto

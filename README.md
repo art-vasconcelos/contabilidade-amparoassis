@@ -29,7 +29,7 @@ Material interno fica em **Markdown**.
 | # | Entregável | Formato | Local | Status |
 |---|---|---|---|---|
 | 1 | Estrutura de pastas + README | Markdown | raiz | ✅ Pronto |
-| 2 | Proposta geral de serviços | HTML → PDF | `03-propostas/servicos-gerais/` | ⏳ A fazer |
+| 2 | Proposta geral de serviços | HTML → PDF | `03-propostas/servicos-gerais/` | 🟡 Em revisão |
 | 3 | Proposta do projeto de automação com IA | HTML → PDF | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |
 | 4 | Formulário de levantamento de processos | Excel | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |
 | 5 | Texto do e-mail de envio | Markdown | `03-propostas/projeto-automacao-ia/` | ⏳ A fazer |

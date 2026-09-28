@@ -1,0 +1,126 @@
+/* Artur Vasconcelos – Tecnologia e Dados
+   Estilo base dos documentos para cliente (HTML → PDF A4). */
+
+@font-face { font-family: "Inter"; font-weight: 400; src: url("fontes/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: url("fontes/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("fontes/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("fontes/inter-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 600; src: url("fontes/source-serif-4-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 700; src: url("fontes/source-serif-4-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-style: italic; font-weight: 400; src: url("fontes/source-serif-4-latin-400-italic.woff2") format("woff2"); }
+
+:root {
+  --tinta: #1d2a2e;        /* texto */
+  --suave: #56676c;        /* texto secundário */
+  --marca: #13505b;        /* petróleo */
+  --marca-clara: #e3eef0;
+  --areia: #f5f0e8;        /* fundo de destaque */
+  --linha: #d9e0e2;
+  --alerta: #fff1b8;       /* marcador [DEFINIR] */
+  --papel: #ffffff;
+}
+
+/* Margem zero na página e respiro dado pela .folha, repetido em cada página
+   (box-decoration-break). Assim a capa pode ocupar a folha inteira. */
+@page { size: A4; margin: 0; }
+@media print {
+  .folha { padding: 18mm 18mm 20mm; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+}
+
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0; background: var(--papel); color: var(--tinta);
+  font: 400 10.5pt/1.55 "Inter", "Liberation Sans", Arial, sans-serif;
+}
+
+h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; color: var(--marca); line-height: 1.2; margin: 0; }
+h2 { font-size: 18pt; font-weight: 700; margin: 0 0 4mm; }
+h3 { font-size: 12pt; font-weight: 600; margin: 0 0 1mm; }
+p { margin: 0 0 3mm; }
+ul { margin: 0; padding-left: 4.5mm; }
+li { margin: 0 0 .7mm; }
+strong { font-weight: 600; }
+
+.pagina { break-before: page; }
+.secao { margin-bottom: 8mm; break-inside: avoid; }
+.rotulo {
+  font: 600 8pt/1 "Inter", sans-serif; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--suave); margin-bottom: 2.5mm;
+}
+.lead { font-size: 11.5pt; color: var(--suave); max-width: 150mm; }
+
+/* Marcador de valor a preencher: fica amarelo para ser fácil de achar. */
+.definir { background: var(--alerta); padding: 0 1.2mm; border-radius: 1mm; font-weight: 600; white-space: nowrap; }
+
+/* ---------- Capa ---------- */
+.capa {
+  height: 297mm; width: 210mm; padding: 26mm 22mm; display: flex; flex-direction: column;
+  background: var(--marca); color: #fff;
+}
+.capa .marca { font: 600 10pt/1.3 "Inter", sans-serif; letter-spacing: .04em; opacity: .9; }
+.capa .marca b { display: block; font: 700 15pt/1.2 "Source Serif 4", serif; letter-spacing: 0; opacity: 1; }
+.capa .titulo { margin-top: auto; }
+.capa h1 { color: #fff; font-size: 38pt; font-weight: 700; max-width: 150mm; }
+.capa .para { margin-top: 8mm; font-size: 12pt; line-height: 1.6; opacity: .92; }
+.capa .para b { font-weight: 600; }
+.capa .rodape {
+  margin-top: 22mm; padding-top: 6mm; border-top: 1px solid rgba(255,255,255,.3);
+  display: flex; justify-content: space-between; gap: 8mm; font-size: 9.5pt; opacity: .88;
+}
+.capa .definir { color: var(--tinta); }
+
+/* ---------- Blocos ---------- */
+.grade { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.cartao {
+  border: 1px solid var(--linha); border-radius: 2.5mm; padding: 4mm 4.5mm;
+  break-inside: avoid; background: var(--papel);
+}
+.cartao .beneficio { color: var(--suave); font-size: 9.3pt; line-height: 1.4; margin-bottom: 2mm; }
+.cartao ul { font-size: 9.3pt; line-height: 1.45; }
+.cartao .nota { margin-top: 3mm; font-size: 8.8pt; color: var(--suave); border-top: 1px dashed var(--linha); padding-top: 2mm; }
+
+.caso { border-left: 1.2mm solid var(--marca); padding: 1mm 0 1mm 5mm; margin-bottom: 6mm; break-inside: avoid; }
+.caso dl { display: grid; grid-template-columns: 30mm 1fr; gap: 1.5mm 4mm; margin: 2mm 0 0; font-size: 10pt; }
+.caso dt { font-weight: 600; color: var(--suave); }
+.caso dd { margin: 0; }
+
+.destaque { background: var(--areia); border-radius: 2.5mm; padding: 5mm 6mm; break-inside: avoid; }
+.destaque h3 { margin-bottom: 2mm; }
+.destaque p:last-child { margin-bottom: 0; }
+
+/* Planos de contratação */
+.plano { display: flex; flex-direction: column; }
+.plano .preco { font: 700 17pt/1.1 "Source Serif 4", serif; color: var(--tinta); margin: .5mm 0 2mm; }
+.plano .preco small { font: 500 9.5pt "Inter", sans-serif; color: var(--suave); }
+.plano.recomendado { border: 1.6px solid var(--marca); background: var(--marca-clara); }
+.selo {
+  align-self: flex-start; font: 600 7.5pt/1 "Inter", sans-serif; letter-spacing: .08em; text-transform: uppercase;
+  background: var(--marca); color: #fff; padding: 1.4mm 2.2mm; border-radius: 1mm; margin-bottom: 2.5mm;
+}
+ol.passos { margin: 0; padding-left: 5mm; font-size: 9.3pt; line-height: 1.45; }
+ol.passos li { margin-bottom: 1mm; }
+
+table.tabela { width: 100%; border-collapse: collapse; font-size: 10pt; }
+.tabela th { text-align: left; font-weight: 600; color: var(--suave); font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em; }
+.tabela th, .tabela td { padding: 2.4mm 3mm; border-bottom: 1px solid var(--linha); vertical-align: top; }
+.tabela td:first-child { width: 58%; }
+
+.numerados { counter-reset: n; list-style: none; padding: 0; }
+.numerados > li { counter-increment: n; position: relative; padding-left: 11mm; margin-bottom: 4mm; break-inside: avoid; }
+.numerados > li::before {
+  content: counter(n); position: absolute; left: 0; top: .3mm; width: 7mm; height: 7mm; border-radius: 50%;
+  background: var(--marca); color: #fff; font: 600 9.5pt/7mm "Inter", sans-serif; text-align: center;
+}
+
+.contato { display: flex; gap: 10mm; flex-wrap: wrap; font-size: 10pt; margin-top: 3mm; }
+.contato span b { display: block; font-size: 8pt; color: var(--suave); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+
+/* Visualização em tela (fora da impressão) */
+@media screen {
+  body { background: #e9edee; }
+  .folha { max-width: 210mm; margin: 10mm auto; background: var(--papel); padding: 18mm; box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+  .capa { max-width: 210mm; margin: 10mm auto 0; }
+  .pagina { break-before: auto; }
+}
