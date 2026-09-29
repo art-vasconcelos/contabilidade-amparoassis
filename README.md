@@ -16,7 +16,7 @@ de atendimentos.
 | `03-propostas/servicos-gerais/` | Proposta geral: todos os serviços e formas de cobrança (hora remota, hora presencial, manutenção mensal, projeto) | Amparo |
 | `03-propostas/projeto-automacao-ia/` | Proposta do primeiro projeto de automação com IA + formulário de levantamento de processos (Excel) | Amparo |
 | `03-propostas/emails-de-envio.md` | Textos dos três e-mails de envio (proposta geral, cartilha, automação) | Interno |
-| `04-cartilhas/clientes-amparo/` | Cartilha de serviços para os clientes da Amparo (pequenos comércios) | Clientes da Amparo |
+| `04-cartilhas/clientes-amparo/` | Cartilha de serviços para os clientes da Amparo | Clientes da Amparo |
 | `05-modelos/` | Modelos reutilizáveis: registro de atendimento, orçamento de projeto | Interno |
 | `_identidade/` | Nome, contatos e padrão visual usados em todos os documentos | Interno |
 
@@ -32,11 +32,25 @@ Material interno fica em **Markdown**.
 | 1 | Estrutura de pastas + README | Markdown | raiz | ✅ Pronto |
 | 2 | Proposta geral de serviços | HTML → PDF | `03-propostas/servicos-gerais/` | ✅ Pronto |
 | 3 | Proposta do projeto de automação com IA | HTML → PDF | `03-propostas/projeto-automacao-ia/` | ✅ Pronto |
-| 4 | Formulário de levantamento de processos | Excel | `03-propostas/projeto-automacao-ia/` | 🟡 Em revisão |
-| 5 | Textos dos 3 e-mails de envio | Markdown | `03-propostas/emails-de-envio.md` | 🟡 Em revisão |
+| 4 | Formulário de levantamento de processos | Excel | `03-propostas/projeto-automacao-ia/` | ✅ Pronto |
+| 5 | Textos dos 3 e-mails de envio | Markdown | `03-propostas/emails-de-envio.md` | ✅ Pronto |
 | 6 | Histórico dos atendimentos | Markdown | `01-historico/` | ⏳ Depois |
 | 7 | Plano de backup e monitoramento | Markdown + scripts | `02-tecnico/backup-monitoramento/` | ⏳ Depois |
-| 8 | Cartilha para os clientes da Amparo | HTML → PDF | `04-cartilhas/clientes-amparo/` | 🟡 Em revisão |
+| 8 | Cartilha para os clientes da Amparo | HTML → PDF | `04-cartilhas/clientes-amparo/` | ✅ Pronto |
+
+---
+
+## Próximos passos (retomar daqui)
+
+1. Abrir o formulário no Excel e conferir o visual antes de enviar (a planilha não pôde ser
+   aberta no ambiente onde foi gerada).
+2. Enviar os três e-mails, na ordem de `03-propostas/emails-de-envio.md`.
+3. Aguardar retorno: nome do escritório na capa da cartilha e valor da análise/teste do projeto
+   de automação (ainda não definido; decidir quando perguntarem).
+4. Entregável 6: histórico dos atendimentos (datas em `[DEFINIR]` se não houver registro).
+5. Entregável 7: plano de backup e monitoramento. Primeiro item: verificar o que o HD externo
+   guarda hoje.
+6. Definir o valor da hora para clientes da Amparo (`_identidade/marca.md`).
 
 ---
 
