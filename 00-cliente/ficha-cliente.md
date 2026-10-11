@@ -52,6 +52,10 @@
 4. **Windows 10 sem suporte** desde outubro de 2025: não recebe mais atualizações de segurança.
 5. **PostgreSQL 10 sem suporte** desde novembro de 2022. A troca de versão depende do fornecedor
    do sistema da folha; registrar e não mexer sem a aprovação dele.
+6. **Dois clones prontos para dar boot na mesma máquina.** Em out/2026 o servidor subiu pelo
+   SSD antigo depois de uma queda de energia. Ver `01-historico/2026-10-incidente-boot-ssd-antigo.md`.
+7. **Sem nobreak, e bateria da placa-mãe possivelmente fraca.** Os dois estão em compra pelo
+   escritório (out/2026).
 
 Detalhes de cada atendimento: ver `01-historico/`.
 

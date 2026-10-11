@@ -12,6 +12,7 @@ de atendimentos.
 |---|---|---|
 | `00-cliente/` | Ficha do cliente e descrição do ambiente de TI (servidor, máquinas, sistemas) | Interno |
 | `01-historico/` | Registro de cada atendimento feito: problema, causa, solução, horas | Interno (base para casos de sucesso) |
+| `02-tecnico/incidente-boot-ssd-antigo/` | Roteiro e scripts do incidente de out/2026 (servidor subiu pelo SSD antigo) | Interno |
 | `02-tecnico/backup-monitoramento/` | Plano técnico de backup automático e monitoramento do servidor, com os scripts | Interno + resumo para o cliente |
 | `03-propostas/servicos-gerais/` | Proposta geral: todos os serviços e formas de cobrança (hora remota, hora presencial, manutenção mensal, projeto) | Amparo |
 | `03-propostas/projeto-automacao-ia/` | Proposta do primeiro projeto de automação com IA + formulário de levantamento de processos (Excel) | Amparo |
@@ -42,6 +43,8 @@ Material interno fica em **Markdown**.
 
 ## Próximos passos (retomar daqui)
 
+0. **Prioridade: incidente do SSD antigo.** Seguir `02-tecnico/incidente-boot-ssd-antigo/roteiro.md`
+   quando a Natalia liberar o servidor. Bateria da placa-mãe e nobreak estão em compra.
 1. Abrir o formulário no Excel e conferir o visual antes de enviar (a planilha não pôde ser
    aberta no ambiente onde foi gerada).
 2. Enviar os três e-mails, na ordem de `03-propostas/emails-de-envio.md`.
