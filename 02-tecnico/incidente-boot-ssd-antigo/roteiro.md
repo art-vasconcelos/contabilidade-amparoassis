@@ -2,7 +2,17 @@
 
 Registro do incidente: `01-historico/2026-10-incidente-boot-ssd-antigo.md`
 
-## Situação
+> **Atualização de 16/10/2026: as funções dos discos se inverteram.** O servidor **continua
+> ligado pelo SSD antigo** desde 06/10 20:32 (a reativação de 11/10 não valeu). O SSD antigo é
+> o disco **em uso** (C: e D:) e o NVMe está **parado** (E: e F:). Nas fases abaixo:
+> - "disco atual" passa a ser o **SSD antigo**, e o que precisa ser recuperado é o que só
+>   existe no **NVMe** (da migração até 06/10);
+> - o script 04 roda com `-RaizAntigo F:\ -RaizAtual D:\ -Desde "<migração>" -Ate "2026-10-06 20:32"`;
+> - o script 03 copia a pasta `data` do PostgreSQL do **NVMe** (`E:\...`);
+> - **não trocar o disco de boot** até o suporte da IOB/Sage definir como juntar os bancos.
+> Detalhes e linha do tempo: `01-historico/2026-10-incidente-boot-ssd-antigo.md`.
+
+## Situação (como foi entendida em 11/10)
 
 Depois de uma queda de energia, o servidor deu boot pelo **SSD antigo (SATA 1 TB)**, e não
 pelo **SSD novo (NVMe 2 TB)**. O escritório trabalhou alguns dias no disco antigo sem perceber.

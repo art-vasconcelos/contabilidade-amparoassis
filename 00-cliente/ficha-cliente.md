@@ -41,6 +41,8 @@
 | Backup | HD externo ligado direto no servidor · conteúdo copiado [VERIFICAR] |
 | Estações | Cerca de 10 computadores, além do servidor |
 | Acesso remoto | AnyDesk · IDs [VER COFRE] |
+| Rede do servidor | IP 192.168.0.101 por DHCP (roteador 192.168.0.1) · reserva de IP: [VERIFICAR] · tipo de rede deve ser `Private` |
+| Sistema operacional | Barra de tarefas aparenta Windows 11: confirmar com `winver` [VERIFICAR] |
 
 ## Riscos já identificados
 
@@ -54,7 +56,8 @@
    do sistema da folha; registrar e não mexer sem a aprovação dele.
 6. **Dois clones prontos para dar boot na mesma máquina.** Em out/2026 o servidor subiu pelo
    SSD antigo depois de uma queda de energia. Ver `01-historico/2026-10-incidente-boot-ssd-antigo.md`.
-7. **Sem nobreak, e bateria da placa-mãe possivelmente fraca.** Os dois estão em compra pelo
+7. **Desligamentos inesperados frequentes** (09, 13 e 16/10/2026). **Sem nobreak, e bateria
+   da placa-mãe possivelmente fraca.** Os dois estão em compra pelo
    escritório (out/2026).
 
 Detalhes de cada atendimento: ver `01-historico/`.
