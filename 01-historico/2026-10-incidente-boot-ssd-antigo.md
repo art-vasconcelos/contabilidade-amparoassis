@@ -63,7 +63,7 @@ nobreak.
 | 16/10/2026 | Diagnóstico: servidor rodando pelo SSD antigo desde 06/10; 3 desligamentos inesperados (09, 13 e 16/10); `_socket.vcx` (erro 1993) ausente nos dois discos | ✅ |
 | [DEFINIR] | Backup do banco em uso no HD externo G: (fase 0) | ⏳ |
 | [DEFINIR] | Suporte IOB/Sage: trazer para o banco em uso os lançamentos que só existem no NVMe (migração → 06/10) | ⏳ |
-| [DEFINIR] | Diagnóstico e cópia do que só existe no SSD antigo (fases 1 a 3) | ⏳ |
+| [DEFINIR] | Cópia do que só existe no NVMe: banco (pasta data em E:) e arquivos de F: (fases 1 a 3) | ⏳ |
 | [DEFINIR] | Decisão sobre o banco do sistema da folha: refazer lançamentos ou acionar o fornecedor (fase 4) | ⏳ |
 | [DEFINIR] | Igualar os discos e criar a rotina noturna (fase 5) | ⏳ |
 | [DEFINIR] | Bateria da placa-mãe e nobreak (fase 6). Em compra pelo escritório | ⏳ |
