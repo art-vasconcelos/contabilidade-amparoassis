@@ -4,7 +4,7 @@
 **Contato:** Natalia e Thaís
 **Atendimento:** remoto (AnyDesk), com apoio do Claude Code
 **Status:** resolvido (acesso às pastas) · o incidente do SSD antigo segue em andamento
-**Relatório ao cliente:** [PENDENTE] · cobrança: [PENDENTE]
+**Relatório ao cliente:** enviado em 17/10 · cobrança: 1h (R$ 50,00)
 
 ## Tempo
 
@@ -43,10 +43,10 @@ Acesso liberado e equipe voltou a trabalhar.
 
 ## Causa provável
 
-O reset de fábrica do ER605 em 13/10 mudou a faixa da rede (de `192.168.100.x` para
-`192.168.0.x`). Para o Windows do servidor, isso é uma "rede nova", que por padrão entra como
-`Public`. Os desligamentos inesperados (09, 13 e 16/10) também podem causar isso, mas a troca
-de faixa é a explicação mais direta.
+O desligamento inesperado de 16/10 (o servidor religou às 08:09 e reiniciou mais 3 vezes até
+08:25). Depois de um reinício assim, o Windows pode não reconhecer a rede e classificá-la como
+`Public`. A troca de faixa da LAN no reset do ER605 (13/10) foi descartada como causa: ao fim
+da visita de 13/10 o acesso às pastas foi validado em todas as máquinas.
 
 ## Achados do mesmo atendimento
 
@@ -59,40 +59,30 @@ Detalhes e próximos passos: `2026-10-incidente-boot-ssd-antigo.md`.
 
 ---
 
-## Relatório para o cliente (rascunho)
+## Relatório enviado ao cliente
 
 **Assunto:** Relatório de atendimento – 16/10 – Computadores sem acesso às pastas do servidor
 
 Olá, Natalia, tudo bem?
 
-Segue o resumo do atendimento de sexta-feira (16/10) sobre a falha de acesso às pastas do
-servidor.
+Segue o resumo do atendimento de sexta-feira (16/10) sobre a falha de acesso às pastas do servidor.
 
 **O problema**
-Os computadores da equipe não conseguiam abrir as pastas do servidor, e o sistema da folha
-mostrava erro ao abrir, embora o servidor e a internet estivessem funcionando.
+Os computadores da equipe não conseguiam abrir as pastas do servidor, e o sistema da folha mostrava erro ao abrir. O servidor e a internet estavam funcionando normalmente.
 
 **O que foi feito**
-- Diagnóstico remoto via AnyDesk: testes de conexão com o servidor, com a internet e com o
-  servidor de licenças do sistema da folha;
-- Identificação da causa: o Windows do servidor passou a tratar a rede do escritório como uma
-  "rede pública" e, nesse modo, bloqueia o compartilhamento de pastas. Isso acontece quando ele
-  entende que está em uma rede nova, como depois da troca de configuração do roteador ou de um
-  desligamento inesperado;
+- Diagnóstico remoto via AnyDesk: testes de conexão com o servidor, com a internet e com o servidor de licenças do sistema da folha;
+- Identificação da causa: o servidor desligou sozinho na sexta de manhã e, ao religar, o Windows passou a tratar a rede do escritório como uma "rede pública". Nesse modo, ele bloqueia por segurança o compartilhamento de pastas com os outros computadores;
 - Correção da configuração de rede e liberação do compartilhamento no servidor;
 - Validação do acesso pelos computadores da equipe;
-- Levantamento do estado do servidor, que trouxe dois pontos de atenção (abaixo).
+- Verificação do estado geral do servidor, que trouxe dois pontos de atenção (abaixo).
 
 **Resultado**
 Acesso às pastas e ao sistema restabelecido em todos os computadores.
 
 **Pontos de atenção**
-- Desde 06/10, o servidor está ligando pelo disco antigo, que ficou como reserva da troca, e não
-  pelo disco novo. Nenhum dado foi perdido: o trabalho desses dias está no disco antigo, e o que
-  foi feito antes de 06/10 está no disco novo. Vamos juntar as duas partes com calma, combinando
-  pelo grupo.
-- O servidor desligou sozinho 3 vezes na semana (dias 09, 13 e 16). Isso deixa o nobreak e a
-  bateria da placa-mãe urgentes.
+- Desde 06/10, o servidor está ligando pelo disco antigo, que ficou como reserva da troca, e não pelo disco novo. Nenhum dado foi perdido: o trabalho desses dias está no disco antigo, e o que foi feito antes de 06/10 está no disco novo. Vamos juntar as duas partes com calma, combinando os horários pelo grupo.
+- O servidor desligou sozinho 3 vezes na última semana (dias 09, 13 e 16). Cada desligamento desses pode causar problemas como o de sexta, por isso o nobreak e a bateria da placa-mãe ficaram urgentes.
 
 **Tempo de atendimento**
 - Remoto: 1h

@@ -9,5 +9,5 @@ desta pasta.
 | 30/09 | Instalação temporária do nobreak antigo | — | sem custo | No e-mail de 29/09 | — |
 | 11/10 | Incidente SSD antigo: tentativa de boot pelo NVMe + roteiro e scripts | [DEFINIR] | [DEFINIR] | Não enviado | [VERIFICAR] |
 | 13/10 | Sem navegação, DNS do ER605 (`2026-10-13-sem-internet-dns-er605.md`) | 2h00 | R$ 100,00 | Enviado 17/10 | [VERIFICAR] |
-| 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 [CONFIRMAR] | R$ 50,00 | [PENDENTE] | [VERIFICAR] |
+| 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 | R$ 50,00 | Enviado 17/10 | [VERIFICAR] |
 | | **Total lançado (sem 11/10)** | **6h00** | **R$ 300,00** | | |

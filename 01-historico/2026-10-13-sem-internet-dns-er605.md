@@ -55,9 +55,9 @@ configurado na WAN, e esse repasse estava quebrado.
 ## Consequência observada em 16/10
 
 No atendimento de 16/10 o servidor estava em `192.168.0.x`, com o roteador na faixa de fábrica.
-Ou seja, **a LAN voltou para a faixa padrão após o reset**. Para o Windows do servidor isso é
-uma "rede nova", o que é a explicação mais provável para a rede ter ficado `Public` e bloqueado
-o compartilhamento de pastas. Ver `2026-10-16-computadores-sem-acesso-pastas.md`.
+Ou seja, **a LAN voltou para a faixa padrão após o reset**. O acesso às pastas continuou
+funcionando depois da visita; a perda de acesso de 16/10 veio do desligamento inesperado
+daquele dia. Ver `2026-10-16-computadores-sem-acesso-pastas.md`.
 
 ## Pendências / pontos de atenção
 
