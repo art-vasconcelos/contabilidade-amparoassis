@@ -166,6 +166,16 @@ Nas planilhas, "SSD antigo" quer dizer o NVMe (o disco passado em `-RaizAntigo`)
 | F: (Dados) | 0 | 0 | 2 (OneDrive) | 0 | Nada a devolver ao D: |
 | E: (Sistema) | 19 | 1 | 64 | 4 | Quase tudo é cache e log do Windows, AnyDesk e OneDrive. Há 6 arquivos em `Folhamatic\FolhaWin\central` e `central\dados` para conferir |
 
+**Detalhe (16:50):**
+- Banco do NVMe: última gravação em **24/09 21:56** (`pg_control` e log). Nenhum lançamento depois da migração.
+- Sistema da folha: só `atualizador\dados\ATUALIZACAO.CDX` está mais novo no NVMe. É o índice de
+  `ATUALIZACAO.DBF`, que está mais novo no disco em uso, então **não deve ser copiado**: o índice
+  ficaria fora de sincronia com a tabela. Os outros arquivos são mais novos no disco em uso.
+- Só no NVMe: logs `DiagFalhaBD` de 24/09 21:43 a 21:57 (o sistema da folha registrou falha de
+  banco na noite da migração, pouco antes de o servidor voltar ao SSD antigo às 22:02), logs do
+  Windows e cache. Nada a recuperar.
+- **Conclusão: as etapas 3a a 3d não são necessárias. Seguir para o backup e o clone.**
+
 **Ponto de parada:** só seguir para a etapa 4 com as etapas 2 e 3 concluídas e sem erro.
 
 ## Etapa 4 – Clone SATA → NVMe (escritório sem uso)

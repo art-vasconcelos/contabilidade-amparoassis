@@ -29,6 +29,7 @@ sistema do SSD antigo.
 |---|---|---|
 | 18/09 a 24/09 20:14 | Histórico igual nos dois logs (clone feito em 24/09, entre 18:51 e 20:14) | — |
 | 24/09 21:28 | Desligamento inesperado e boot pelo **NVMe**. É o último registro do log do NVMe | NVMe |
+| 24/09 21:43 – 21:57 | Sistema da folha registra falha de banco (`DiagFalhaBD`) no NVMe; última gravação do banco do NVMe às 21:56 | NVMe |
 | 24/09 22:02, 22:09 e 22:12 | Boots pelo **SSD antigo**. Ele segue em uso desde então | SATA |
 | 25/09, 27/09 (2×), 05/10, 06/10 (3×), 09/10, 13/10 e 16/10 | **Desligamentos inesperados: 10 em pouco mais de 3 semanas** | SATA |
 
