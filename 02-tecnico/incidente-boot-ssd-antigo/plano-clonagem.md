@@ -114,6 +114,16 @@ robocopy "C:\PostgreSQL\10\data" "G:\Backup-Banco-SSD-antigo\data" /E /COPY:DAT 
 # conferir no log: linha "Falhas" (Failed) zerada; depois seguir direto para a etapa 4 com o banco parado
 ```
 
+**Execução de 17/10:**
+- 16:52 – banco parado (`Stop-Service`) e cópia fria da pasta `data` para `G:\Backup-2026-10-17\PostgreSQL-data`.
+  Concluída com código 1 (sem falhas): **47,61 GB**, igual à origem. Velocidade de cerca de 0,8 GB/min.
+- 17:44 – cópia de `C:\Folhamatic` (cerca de 15 GB, muitos arquivos pequenos, cerca de 0,2 GB/min).
+  Às 18:15, reiniciada com `/MT:16` para acelerar.
+- Conteúdo do G: antes do backup: `BKPs` (alterada em 14/10/2026, ou seja, alguma rotina grava ali),
+  `backup_pg_data` (24/09/2026 18:18, tarde da migração), `AC-SERVIDOR` (23/05/2026),
+  `WindowsImageBackup` (18/10/2024) e `Binaries` (13/10/2024). Investigar a rotina de `BKPs` antes de
+  montar o backup noturno.
+
 ## Etapa 3 – Guardar o que só existe no NVMe (só lê o NVMe)
 
 **3a. Pasta do banco do NVMe.** Mesmo caminho da pasta `data` da etapa 0, trocando `C:` por `E:`:
