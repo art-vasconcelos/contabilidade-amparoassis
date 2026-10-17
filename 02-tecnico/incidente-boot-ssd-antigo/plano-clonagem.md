@@ -224,6 +224,9 @@ ela só leva ESP, MSR e Sistema, e deixa o D: de fora.
 - Depois do clone: banco religado (`Running`); disco 0 (SATA) segue `IsBoot = True`; o NVMe ficou **online** com
   E: Sistema (143,8 GB usados) e F: Dados (**183,1 GB usados, contra 156,2 GB no D:**: diferença de 27 GB a explicar).
   A partição de recuperação do NVMe recebeu a letra **H:**, que deve ser removida.
+- 20:12 – conferência `robocopy D:\ F:\ /L` (sem `System Volume Information` e `$RECYCLE.BIN`): **4.882.468 arquivos,
+  302,06 GB, 0 a copiar, 0 extras, 0 falhas**. O F: é idêntico ao D:. Os 27 GB a mais estão só na área de sistema
+  (`System Volume Information`, cópias de sombra). Letra H: removida com `mountvol H: /D`.
 
 ## Etapa 5 – Passar a ligar pelo NVMe (presencial, recomendado)
 
