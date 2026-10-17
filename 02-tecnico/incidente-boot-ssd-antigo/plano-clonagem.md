@@ -85,7 +85,11 @@ O log do Windows do NVMe mostra quando ele começou a ser usado:
 Na última seção (o título diz "SSD ANTIGO", mas o log lido é o de `E:`, o NVMe), o primeiro
 "Windows iniciou" é a data da migração.
 
-- [ ] Data da migração: [DEFINIR]
+- [x] Data da migração: **24/09/2026**. O log do NVMe termina em 24/09 21:28. O SSD antigo
+      liga desde 24/09 22:02, então o NVMe só tem cerca de meia hora a mais que o antigo, e não
+      os dias até 06/10, como se pensava em 16/10.
+- Consequência: a etapa 3 vira uma **conferência** com `-Desde "2026-09-24 20:00"`. Se ela não
+  mostrar nada relevante, não há o que devolver ao D: nem banco para juntar.
 
 ## Etapa 2 – Backup do banco em uso
 

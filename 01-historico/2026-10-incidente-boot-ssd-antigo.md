@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Início no SSD antigo | 06/10/2026 20:32 (log do Windows do SSD antigo) |
+| Início no SSD antigo | **24/09/2026 22:02**, na noite da migração (corrigido em 17/10; o diagnóstico de 16/10 apontava 06/10) |
 | Comunicado por | Natalia, em 11/10/2026 |
 | Atendimento | Remoto (AnyDesk) · presencial depois, para bateria e nobreak |
 | Status | 🟡 Em andamento: servidor ainda rodando pelo SSD antigo |
@@ -11,40 +11,45 @@
 
 ## O que aconteceu
 
-Depois de uma queda de energia, o servidor ligou pelo SSD antigo (SATA 1 TB), que tinha ficado
-na máquina como reserva da migração, e não pelo SSD novo (NVMe 2 TB). O escritório trabalhou
-alguns dias nele sem perceber. Em 11/10, o Artur tentou reativar o boot pelo NVMe 2 TB, mas
-**a mudança não chegou a valer**: em 16/10 o diagnóstico mostrou que o servidor continuava
-ligado pelo SSD antigo (disco 0, SATA, `IsBoot = True`).
+> **Correção de 17/10/2026.** O diagnóstico de 16/10 dizia que o servidor ligava pelo SSD
+> antigo desde 06/10. A leitura completa dos logs dos dois discos mostrou outra coisa: **o NVMe
+> só ligou em 24/09, na noite da migração**, e às 22:02 do mesmo dia o servidor já voltou a
+> ligar pelo SSD antigo. Desde então, todo o trabalho do escritório está no SSD antigo, e o NVMe
+> praticamente não tem nada que falte no antigo.
 
-### Linha do tempo (eventos 6005/6006/6008 do Windows do SSD antigo)
+Depois da migração para o NVMe 2 TB, em 24/09, o servidor voltou a ligar pelo SSD antigo
+(SATA 1 TB), que tinha ficado na máquina como reserva. O escritório trabalhou nele desde
+então. Em 11/10, o Artur tentou reativar o boot pelo NVMe, mas **a mudança não chegou a
+valer**. A ordem de boot do firmware aponta o "Windows Boot Manager" para a partição de
+sistema do SSD antigo.
 
-| Data/hora | Evento |
-|---|---|
-| [DEFINIR] | Migração do SSD antigo para o NVMe 2 TB |
-| 06/10 20:32 | Servidor passa a ligar pelo SSD antigo |
-| 09/10 (antes de 14:02) | Desligamento inesperado; religa 14:02; reinício 14:44 |
-| 13/10 (antes de 09:16) | Desligamento inesperado; religa 09:16 |
-| 16/10 (antes de 08:09) | Desligamento inesperado; religa 08:09; mais 3 reinícios até 08:25 |
+### Linha do tempo (logs do Windows dos dois discos, lidos em 17/10)
 
-Causa dos desligamentos (energia ou travamento) e último uso do NVMe: [VERIFICAR] (comandos A,
-B e C do atendimento de 16/10).
+| Data/hora | Evento | Disco |
+|---|---|---|
+| 18/09 a 24/09 20:14 | Histórico igual nos dois logs (clone feito em 24/09, entre 18:51 e 20:14) | — |
+| 24/09 21:28 | Desligamento inesperado e boot pelo **NVMe**. É o último registro do log do NVMe | NVMe |
+| 24/09 22:02, 22:09 e 22:12 | Boots pelo **SSD antigo**. Ele segue em uso desde então | SATA |
+| 25/09, 27/09 (2×), 05/10, 06/10 (3×), 09/10, 13/10 e 16/10 | **Desligamentos inesperados: 10 em pouco mais de 3 semanas** | SATA |
+
+Vários eventos 6008 registram o horário do desligamento **depois** do horário em que o
+Windows religou (ex.: em 25/09 14:15, "desligamento às 16:55 de 26/09"). Isso indica que o
+relógio da placa-mãe se perdeu nas quedas, outro sinal de bateria da placa-mãe fraca.
 
 ### Letras dos discos (16/10)
 
 | Disco | Modelo | Letras |
 |---|---|---|
 | 0 | SSD 1 TB SATA (antigo, **em uso**) | C: Sistema · D: Dados (compartilhamentos `Empresas` e `Rede - Amparo`) |
-| 1 | Kingston NVMe 2 TB (parado desde 06/10) | E: Sistema · F: Dados |
+| 1 | Kingston NVMe 2 TB (parado desde 24/09) | E: Sistema · F: Dados |
 | 2 | Seagate Expansion USB | G: HD externo |
 
 ## Impacto
 
-- **SSD antigo (em uso):** tem tudo de 06/10 em diante e falta o que foi feito entre a
-  migração e 06/10.
-- **NVMe (parado):** tem tudo da migração até 06/10 e falta tudo depois disso.
-- Os dois discos ficaram com dados diferentes, e nenhum deles tem tudo. O tamanho da diferença
-  depende da data da migração.
+- **SSD antigo (em uso):** tem todo o trabalho desde a migração.
+- **NVMe (parado):** tem só o estado do dia da migração, mais cerca de meia hora de 24/09 à
+  noite. A conferência de 17/10 (planilhas do script 04) confirma se há algo dele a guardar.
+- Não há bancos para juntar e não é preciso acionar a IOB/Sage, desde que a conferência confirme.
 
 ## Causa provável
 
@@ -60,9 +65,10 @@ nobreak.
 | 11/10/2026 | Tentativa de reativar o boot pelo NVMe 2 TB | ❌ Não valeu |
 | 11/10/2026 | Roteiro e scripts de recuperação preparados | ✅ |
 | 16/10/2026 | Computadores sem acesso às pastas do servidor: a rede do servidor estava como `Public`. Corrigido para `Private` e regra de compartilhamento liberada no firewall | ✅ |
-| 16/10/2026 | Diagnóstico: servidor rodando pelo SSD antigo desde 06/10; 3 desligamentos inesperados (09, 13 e 16/10); `_socket.vcx` (erro 1993) ausente nos dois discos | ✅ |
+| 16/10/2026 | Diagnóstico: servidor rodando pelo SSD antigo desde 06/10 (corrigido em 17/10: desde 24/09); 3 desligamentos inesperados (09, 13 e 16/10); `_socket.vcx` (erro 1993) ausente nos dois discos | ✅ |
 | [DEFINIR] | Backup do banco em uso no HD externo G: (fase 0) | ⏳ |
-| [DEFINIR] | Suporte IOB/Sage: trazer para o banco em uso os lançamentos que só existem no NVMe (migração → 06/10) | ⏳ |
+| 17/10/2026 | Leitura dos logs dos dois discos: NVMe parado desde 24/09; nada de 25/09 em diante ficou só nele. Acionar a IOB/Sage deixa de ser necessário, se a conferência confirmar | ✅ |
+| 17/10/2026 | Clonagem SSD antigo → NVMe (`02-tecnico/incidente-boot-ssd-antigo/plano-clonagem.md`) | 🟡 Em andamento |
 | [DEFINIR] | Cópia do que só existe no NVMe: banco (pasta data em E:) e arquivos de F: (fases 1 a 3) | ⏳ |
 | [DEFINIR] | Decisão sobre o banco do sistema da folha: refazer lançamentos ou acionar o fornecedor (fase 4) | ⏳ |
 | [DEFINIR] | Igualar os discos e criar a rotina noturna (fase 5) | ⏳ |
