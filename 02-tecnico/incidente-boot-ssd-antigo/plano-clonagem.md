@@ -220,7 +220,10 @@ ela só leva ESP, MSR e Sistema, e deixa o D: de fora.
   no fim do NVMe, para estender o D: depois); "When finished" desmarcado.
 - Início por volta de 19:35, a cerca de 110 MB/s, estimativa de 45 min. Cópia a quente, sem reiniciar.
 
-- [ ] Clone concluído em: [DEFINIR]
+- [x] Clone concluído às **20:03**: "Clone disk completed successfully", 304.016 MB em 27min34s (cerca de 183 MB/s).
+- Depois do clone: banco religado (`Running`); disco 0 (SATA) segue `IsBoot = True`; o NVMe ficou **online** com
+  E: Sistema (143,8 GB usados) e F: Dados (**183,1 GB usados, contra 156,2 GB no D:**: diferença de 27 GB a explicar).
+  A partição de recuperação do NVMe recebeu a letra **H:**, que deve ser removida.
 
 ## Etapa 5 – Passar a ligar pelo NVMe (presencial, recomendado)
 
