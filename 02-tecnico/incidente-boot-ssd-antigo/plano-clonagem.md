@@ -62,6 +62,18 @@ Anotar:
 - [ ] Espaço livre no G: (precisa caber o backup do banco, a pasta do banco do NVMe e os arquivos alterados).
 - [ ] Nome do serviço do PostgreSQL e caminho da pasta `data` (parâmetro `-D` no `PathName`).
 
+**Resultado de 17/10, 16:31:**
+
+| Disco | Modelo | GB | Boot | Partições (usado / livre em GB) |
+|---|---|---|---|---|
+| 0 | SSD 1TB (GPT) | 932 | **Sim** | C: Sistema 143,2 / 103,7 · D: Dados 156,2 / 527,4 |
+| 1 | KINGSTON SNV3S2000G (GPT) | 1863 | Não, online | E: Sistema 162,5 / 84,4 · F: Dados 155,1 / 1460 |
+| 2 | Seagate Expansion (MBR) | 1863 | Não | G: "Thaís" 925,2 / 937,8 |
+
+- Serviço do banco: `postgresql-x64-10`, rodando. Pasta `data`: `C:\PostgreSQL\10\data` (no NVMe: `E:\PostgreSQL\10\data`).
+- O HD externo tem 937,8 GB livres: cabe com folga o backup do banco, a cópia do NVMe e os arquivos alterados.
+- Usar o **Windows PowerShell 64 bits**, e não o "(x86)": o `bcdedit` não existe na versão 32 bits.
+
 ## Etapa 1 – Data da migração (só leitura)
 
 O log do Windows do NVMe mostra quando ele começou a ser usado:
@@ -93,8 +105,8 @@ sem senha.
 pasta `data` inteira. Com o serviço parado, a cópia é um backup completo.
 
 ```powershell
-Stop-Service <nome do serviço do PostgreSQL>
-robocopy "C:\<caminho da pasta data>" "G:\Backup-Banco-SSD-antigo\data" /E /COPY:DAT /DCOPY:T /R:1 /W:1 /NP /LOG:G:\Backup-Banco-SSD-antigo.log
+Stop-Service postgresql-x64-10
+robocopy "C:\PostgreSQL\10\data" "G:\Backup-Banco-SSD-antigo\data" /E /COPY:DAT /DCOPY:T /R:1 /W:1 /NP /LOG:G:\Backup-Banco-SSD-antigo.log
 # conferir no log: linha "Falhas" (Failed) zerada; depois seguir direto para a etapa 4 com o banco parado
 ```
 
@@ -103,7 +115,7 @@ robocopy "C:\<caminho da pasta data>" "G:\Backup-Banco-SSD-antigo\data" /E /COPY
 **3a. Pasta do banco do NVMe.** Mesmo caminho da pasta `data` da etapa 0, trocando `C:` por `E:`:
 
 ```powershell
-.\03-copiar-banco-ssd-antigo.ps1 -Origem "E:\<caminho da pasta data>" -Destino G:\Banco-NVMe-ate-06-10
+.\03-copiar-banco-ssd-antigo.ps1 -Origem "E:\PostgreSQL\10\data" -Destino G:\Banco-NVMe-ate-06-10
 ```
 
 **3b. Pasta do sistema da folha no NVMe**, inteira, por segurança (é pequena e é onde o erro 1993 apontava):
@@ -152,7 +164,7 @@ Baixar do site oficial (`easyuefi.com`).
 
 1. Parar o banco para a cópia ficar limpa (se já estiver parado pela etapa 2, seguir):
    ```powershell
-   Stop-Service <nome do serviço do PostgreSQL>
+   Stop-Service postgresql-x64-10
    ```
 2. No Hasleo Disk Clone: **Disk Clone** → origem **Disco 0 (SATA 1 TB)** → destino **Disco 1
    (NVMe 2 TB)**. Conferir duas vezes pelo modelo e tamanho: o destino é apagado.
@@ -161,7 +173,7 @@ Baixar do site oficial (`easyuefi.com`).
 4. Esperar terminar. O servidor continua ligado pelo SATA.
 5. Subir o banco e conferir:
    ```powershell
-   Start-Service <nome do serviço do PostgreSQL>
+   Start-Service postgresql-x64-10
    Get-Disk | Sort-Object Number | Format-Table Number, FriendlyName, IsBoot, IsOffline -AutoSize
    ```
    É normal o NVMe aparecer **offline** (o Windows faz isso com discos clonados). Deixar assim.
