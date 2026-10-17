@@ -6,7 +6,7 @@
 | Comunicado por | Natalia, em 11/10/2026 |
 | Atendimento | Remoto (AnyDesk) · presencial depois, para bateria e nobreak |
 | Status | 🟡 Em andamento: servidor ainda rodando pelo SSD antigo |
-| Horas | [DEFINIR] |
+| Horas | 11/10: [DEFINIR] · 16/10: 1h (ver `controle-de-horas.md`) |
 | Roteiro técnico | `02-tecnico/incidente-boot-ssd-antigo/roteiro.md` |
 
 ## O que aconteceu
