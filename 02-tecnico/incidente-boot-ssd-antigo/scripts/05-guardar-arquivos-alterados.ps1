@@ -15,15 +15,22 @@
   A mesma raiz usada em -RaizAntigo no script 04 (ex.: F:\).
 
 .PARAMETER Destino
-  Pasta de destino (ex.: G:\Arquivos-NVMe\F).
+  Pasta de destino (ex.: G:\Arquivos-NVMe\F). Pode ser a raiz do disco em uso (ex.: D:\)
+  para devolver os arquivos ao lugar certo.
+
+.PARAMETER BackupSubstituidos
+  (Opcional) Pasta onde guardar a versão que já existe no destino antes de ser substituída.
+  Use sempre que o destino for o disco em uso.
 
 .EXAMPLE
   .\05-guardar-arquivos-alterados.ps1 -Planilha C:\Suporte\alterados-nvme-F.csv -RaizOrigem F:\ -Destino G:\Arquivos-NVMe\F
+  .\05-guardar-arquivos-alterados.ps1 -Planilha C:\Suporte\alterados-nvme-F-revisada.csv -RaizOrigem F:\ -Destino D:\ -BackupSubstituidos G:\Substituidos-D
 #>
 param(
     [Parameter(Mandatory = $true)][string]$Planilha,
     [Parameter(Mandatory = $true)][string]$RaizOrigem,
-    [Parameter(Mandatory = $true)][string]$Destino
+    [Parameter(Mandatory = $true)][string]$Destino,
+    [string]$BackupSubstituidos
 )
 
 $ErrorActionPreference = "Stop"
@@ -37,6 +44,11 @@ foreach ($l in $linhas) {
     $origem = Join-Path $RaizOrigem $l.Caminho
     $alvo   = Join-Path $Destino $l.Caminho
     try {
+        if ($BackupSubstituidos -and (Test-Path -LiteralPath $alvo)) {
+            $guarda = Join-Path $BackupSubstituidos $l.Caminho
+            New-Item -ItemType Directory -Force -Path (Split-Path $guarda) | Out-Null
+            Copy-Item -LiteralPath $alvo -Destination $guarda -Force
+        }
         New-Item -ItemType Directory -Force -Path (Split-Path $alvo) | Out-Null
         Copy-Item -LiteralPath $origem -Destination $alvo -Force
         (Get-Item -LiteralPath $alvo).LastWriteTime = (Get-Item -LiteralPath $origem).LastWriteTime

@@ -32,8 +32,8 @@ alguém no escritório.
 - [ ] Escritório sem ninguém usando o sistema da folha durante a etapa 4 (o banco fica parado).
 - [ ] Natalia ciente de que os lançamentos do NVMe (migração → 06/10) ficam **guardados no HD
       externo**, mas não voltam sozinhos para o sistema.
-- [ ] Senha do usuário `postgres` [VER COFRE] para o backup da etapa 2. Sem ela, a etapa 2 é
-      substituída pela cópia da pasta do banco com o serviço parado (etapa 4).
+- [ ] Senha do usuário `postgres` [VER COFRE]: opcional. Sem ela, o backup da etapa 2 é feito
+      copiando a pasta do banco com o serviço parado.
 - [ ] Scripts copiados para o servidor em `C:\Suporte\scripts` (transferência de arquivos do AnyDesk).
 
 Antes de rodar os scripts, no PowerShell como administrador:
@@ -69,10 +69,27 @@ Na última seção (o título diz "SSD ANTIGO", mas o log lido é o de `E:`, o N
 
 - [ ] Data da migração: [DEFINIR]
 
-## Etapa 2 – Backup do banco em uso (com o escritório trabalhando ou não)
+## Etapa 2 – Backup do banco em uso
+
+O clone não precisa da senha do banco. Este backup é uma rede de segurança antes de mexer
+no NVMe. Há duas formas:
+
+**Com a senha do `postgres`** (pode rodar com o escritório trabalhando):
 
 ```powershell
 .\02-backup-banco-atual.ps1 -Destino G:\Backup-Banco
+```
+
+Se a senha não for conhecida, tentar só apertar Enter: alguns servidores aceitam conexão local
+sem senha.
+
+**Sem a senha** (com o escritório sem uso, logo antes da etapa 4): parar o banco e copiar a
+pasta `data` inteira. Com o serviço parado, a cópia é um backup completo.
+
+```powershell
+Stop-Service <nome do serviço do PostgreSQL>
+robocopy "C:\<caminho da pasta data>" "G:\Backup-Banco-SSD-antigo\data" /E /COPY:DAT /DCOPY:T /R:1 /W:1 /NP /LOG:G:\Backup-Banco-SSD-antigo.log
+# conferir no log: linha "Falhas" (Failed) zerada; depois seguir direto para a etapa 4 com o banco parado
 ```
 
 ## Etapa 3 – Guardar o que só existe no NVMe (só lê o NVMe)
@@ -102,9 +119,23 @@ $migracao = "<data da etapa 1>"   # ex.: "2026-10-02 18:00"
 
 Nas planilhas, "SSD antigo" quer dizer o NVMe (o disco passado em `-RaizAntigo`).
 
-- [ ] Copiar as duas planilhas para o G: e mandar para revisão. Os arquivos da equipe (F:) que
-      aparecerem como "So no SSD antigo" ou "Antigo mais recente" voltam para o D: depois que a
-      Natalia revisar. Isso pode ser feito com calma, depois do clone.
+**3d. Devolver os arquivos da equipe para o disco em uso (F: → D:).** Revisar a planilha
+`alterados-nvme-F.csv` com a Natalia e apagar as linhas que não devem voltar. Salvar como
+`alterados-nvme-F-revisada.csv` e rodar:
+
+```powershell
+.\05-guardar-arquivos-alterados.ps1 -Planilha C:\Suporte\alterados-nvme-F-revisada.csv -RaizOrigem F:\ -Destino D:\ -BackupSubstituidos G:\Substituidos-D
+```
+
+- Só entram as linhas "So no SSD antigo" e "Antigo mais recente". A versão do D: que for
+  substituída fica guardada em `G:\Substituidos-D`.
+- Linhas "Atual mais recente" são **conflito**: o arquivo foi mexido nos dois discos. Decidir
+  com a equipe, uma a uma.
+- A partição do sistema (E: → C:) **não** é devolvida: são arquivos do Windows e de programas.
+  A planilha `alterados-nvme-E.csv` serve só para conferência.
+- **O banco não entra aqui.** Não dá para juntar dois bancos copiando arquivos: a pasta do banco
+  é um bloco só, e copiar a do NVMe por cima apagaria os dias de trabalho no SSD antigo. Os
+  lançamentos do NVMe ficam guardados (3a) até a equipe refazer ou a IOB/Sage juntar.
 
 **Ponto de parada:** só seguir para a etapa 4 com as etapas 2 e 3 concluídas e sem erro.
 
@@ -113,7 +144,7 @@ Nas planilhas, "SSD antigo" quer dizer o NVMe (o disco passado em `-RaizAntigo`)
 Ferramenta: **Hasleo Disk Clone** (gratuita, clona o disco do sistema com o Windows ligado).
 Baixar do site oficial (`easyuefi.com`).
 
-1. Parar o banco para a cópia ficar limpa:
+1. Parar o banco para a cópia ficar limpa (se já estiver parado pela etapa 2, seguir):
    ```powershell
    Stop-Service <nome do serviço do PostgreSQL>
    ```
