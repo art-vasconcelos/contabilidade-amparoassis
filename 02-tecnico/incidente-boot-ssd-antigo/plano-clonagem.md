@@ -213,6 +213,13 @@ Baixar do site oficial (`easyuefi.com`).
    É normal o NVMe aparecer **offline** (o Windows faz isso com discos clonados). Deixar assim.
 6. Pedir para alguém abrir o sistema da folha em um computador da equipe, ou testar pelo AnyDesk.
 
+**Execução de 17/10:** DiskGenius 6.2.0.1829 x64, **Tools → Clone Disk**. Não usar "System Migration":
+ela só leva ESP, MSR e Sistema, e deixa o D: de fora.
+- Origem: HD0 SSD1TB (932 GB, 300,6 GB de dados). Destino: HD1 KINGSTON SNV3S2000G (1863 GB).
+- Modo "Copy valid data sectors only"; partições do mesmo tamanho da origem (sobram 931,5 GB livres
+  no fim do NVMe, para estender o D: depois); "When finished" desmarcado.
+- Início por volta de 19:35, a cerca de 110 MB/s, estimativa de 45 min. Cópia a quente, sem reiniciar.
+
 - [ ] Clone concluído em: [DEFINIR]
 
 ## Etapa 5 – Passar a ligar pelo NVMe (presencial, recomendado)
