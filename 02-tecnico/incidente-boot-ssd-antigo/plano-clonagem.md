@@ -3,6 +3,12 @@
 Pedido da Natalia em 17/10/2026: deixar os dois discos iguais.
 Contexto: `roteiro.md` e `01-historico/2026-10-incidente-boot-ssd-antigo.md`.
 
+## Execução
+
+| Data | Início | Fim | Remoto/presencial |
+|---|---|---|---|
+| 17/10/2026 | 15:30 | [DEFINIR] | Remoto (AnyDesk) |
+
 ## Situação de partida
 
 | Disco | Letras | Estado | Tem só nele |
