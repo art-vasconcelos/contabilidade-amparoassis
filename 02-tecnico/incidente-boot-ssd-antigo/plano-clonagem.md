@@ -159,6 +159,13 @@ Nas planilhas, "SSD antigo" quer dizer o NVMe (o disco passado em `-RaizAntigo`)
   é um bloco só, e copiar a do NVMe por cima apagaria os dias de trabalho no SSD antigo. Os
   lançamentos do NVMe ficam guardados (3a) até a equipe refazer ou a IOB/Sage juntar.
 
+**Resultado da conferência de 17/10, 16:38–16:45** (`-Desde "2026-09-24 20:00"`):
+
+| Partição do NVMe | So no NVMe | NVMe mais recente | Atual mais recente | Iguais | Leitura |
+|---|---|---|---|---|---|
+| F: (Dados) | 0 | 0 | 2 (OneDrive) | 0 | Nada a devolver ao D: |
+| E: (Sistema) | 19 | 1 | 64 | 4 | Quase tudo é cache e log do Windows, AnyDesk e OneDrive. Há 6 arquivos em `Folhamatic\FolhaWin\central` e `central\dados` para conferir |
+
 **Ponto de parada:** só seguir para a etapa 4 com as etapas 2 e 3 concluídas e sem erro.
 
 ## Etapa 4 – Clone SATA → NVMe (escritório sem uso)
