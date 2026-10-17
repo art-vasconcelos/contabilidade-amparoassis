@@ -119,6 +119,9 @@ robocopy "C:\PostgreSQL\10\data" "G:\Backup-Banco-SSD-antigo\data" /E /COPY:DAT 
   Concluída com código 1 (sem falhas): **47,61 GB**, igual à origem. Velocidade de cerca de 0,8 GB/min.
 - 17:44 – cópia de `C:\Folhamatic` (cerca de 15 GB, muitos arquivos pequenos, cerca de 0,2 GB/min).
   Às 18:15, reiniciada com `/MT:16` para acelerar.
+- 19:20 – backup concluído, **sem nenhuma falha** (código 1 nas duas cópias):
+  - banco: 635.127 arquivos, 47,61 GB;
+  - `Folhamatic`: 199.157 arquivos, 15,56 GB (5,97 GB da primeira passada e 9,58 GB da segunda, com `/MT:16`).
 - Conteúdo do G: antes do backup: `BKPs` (alterada em 14/10/2026, ou seja, alguma rotina grava ali),
   `backup_pg_data` (24/09/2026 18:18, tarde da migração), `AC-SERVIDOR` (23/05/2026),
   `WindowsImageBackup` (18/10/2024) e `Binaries` (13/10/2024). Investigar a rotina de `BKPs` antes de
