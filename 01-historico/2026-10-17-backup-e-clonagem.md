@@ -14,7 +14,7 @@
 | Diagnóstico e conferência dos discos | 15:30 – 16:50 |
 | Backup do banco e da pasta do sistema da folha (HD externo) | 16:52 – 19:20 |
 | Clone SSD antigo → NVMe (DiskGenius) | 19:35 – 20:03 |
-| Conferência do clone e tentativa de preparar o boot pelo NVMe | 20:03 – 20:00+ (encerramento informado pelo Artur: 20:00) |
+| Conferência do clone e tentativa de preparar o boot pelo NVMe | depois do clone (fora do tempo cobrado) |
 | **Total cobrado** | **4h30 (R$ 225,00 a R$ 50/h)** |
 
 Boa parte do tempo foi de espera das cópias (HD externo USB lento). Cobrado de 15:30 às 20:00.
