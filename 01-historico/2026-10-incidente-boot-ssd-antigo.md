@@ -69,7 +69,8 @@ nobreak.
 | 16/10/2026 | Diagnóstico: servidor rodando pelo SSD antigo desde 06/10 (corrigido em 17/10: desde 24/09); 3 desligamentos inesperados (09, 13 e 16/10); `_socket.vcx` (erro 1993) ausente nos dois discos | ✅ |
 | [DEFINIR] | Backup do banco em uso no HD externo G: (fase 0) | ⏳ |
 | 17/10/2026 | Leitura dos logs dos dois discos: NVMe parado desde 24/09; nada de 25/09 em diante ficou só nele. Acionar a IOB/Sage deixa de ser necessário, se a conferência confirmar | ✅ |
-| 17/10/2026 | Clonagem SSD antigo → NVMe (`02-tecnico/incidente-boot-ssd-antigo/plano-clonagem.md`) | 🟡 Em andamento |
+| 17/10/2026 | Backup do banco e da pasta do sistema da folha no G: (sem falhas) e clone SSD antigo → NVMe, conferido arquivo por arquivo (`2026-10-17-backup-e-clonagem.md`) | ✅ |
+| [DEFINIR] | Visita: passar a ligar pelo NVMe com o SSD antigo desconectado e recuperar o acesso remoto | ⏳ |
 | [DEFINIR] | Cópia do que só existe no NVMe: banco (pasta data em E:) e arquivos de F: (fases 1 a 3) | ⏳ |
 | [DEFINIR] | Decisão sobre o banco do sistema da folha: refazer lançamentos ou acionar o fornecedor (fase 4) | ⏳ |
 | [DEFINIR] | Igualar os discos e criar a rotina noturna (fase 5) | ⏳ |

@@ -10,5 +10,5 @@ desta pasta.
 | 11/10 | Incidente SSD antigo: tentativa de boot pelo NVMe + roteiro e scripts | [DEFINIR] | [DEFINIR] | Não enviado | [VERIFICAR] |
 | 13/10 | Sem navegação, DNS do ER605 (`2026-10-13-sem-internet-dns-er605.md`) | 2h00 | R$ 100,00 | Enviado 17/10 | [VERIFICAR] |
 | 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 | R$ 50,00 | Enviado 17/10 | [VERIFICAR] |
-| 17/10 | Clonagem SATA → NVMe (`02-tecnico/incidente-boot-ssd-antigo/plano-clonagem.md`) · início 15:30 · fim [DEFINIR] | [DEFINIR] | [DEFINIR] | [PENDENTE] | [VERIFICAR] |
+| 17/10 | Backup e clonagem SATA → NVMe (`2026-10-17-backup-e-clonagem.md`) · início 15:30 · fim [CONFIRMAR] | [DEFINIR] | [DEFINIR] | Rascunho pronto | [VERIFICAR] |
 | | **Total lançado (sem 11/10)** | **6h00** | **R$ 300,00** | | |
