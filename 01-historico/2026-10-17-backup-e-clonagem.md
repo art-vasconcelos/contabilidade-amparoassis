@@ -14,10 +14,10 @@
 | Diagnóstico e conferência dos discos | 15:30 – 16:50 |
 | Backup do banco e da pasta do sistema da folha (HD externo) | 16:52 – 19:20 |
 | Clone SSD antigo → NVMe (DiskGenius) | 19:35 – 20:03 |
-| Conferência do clone e tentativa de preparar o boot pelo NVMe | 20:03 – [CONFIRMAR] |
-| **Total** | **[CONFIRMAR]** |
+| Conferência do clone e tentativa de preparar o boot pelo NVMe | 20:03 – 20:00+ (encerramento informado pelo Artur: 20:00) |
+| **Total cobrado** | **4h30 (R$ 225,00 a R$ 50/h)** |
 
-Boa parte do tempo foi de espera das cópias (HD externo USB lento). Cobrança: [DEFINIR].
+Boa parte do tempo foi de espera das cópias (HD externo USB lento). Cobrado de 15:30 às 20:00.
 
 ## Resultado
 
@@ -76,8 +76,8 @@ O servidor desligou sozinho 10 vezes desde 25/09. Isso reforça a urgência do n
 placa-mãe, que é a causa provável de ele ter voltado a ligar pelo disco antigo.
 
 **Tempo de atendimento**
-- Remoto: 15h30 às [hh:mm]
-- Total: [X]h (R$ 50,00/h = R$ [valor])
+- Remoto: 15h30 às 20h00
+- Total: 4h30 (R$ 50,00/h = R$ 225,00)
 
 Qualquer dúvida, fico à disposição.
 
