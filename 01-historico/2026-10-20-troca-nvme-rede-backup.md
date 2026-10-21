@@ -75,14 +75,18 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 - **Backup do Windows (`wbadmin`):** parado desde 09/11/2024.
 - **Rotina do próprio sistema da folha** (`G:\BKPs`, uma pasta por dia da semana, backup "online"
   dos bancos da folha, contábil e fiscal):
-  - É disparada pelo próprio sistema, e não por tarefa do Windows. Rodou quase todo dia até 16/10,
-    em geral entre 07:15 e 08:30 (às vezes de madrugada ou ao meio-dia). Logs em
-    `C:\Folhamatic\FolhaWin\backup\LOGS`, configuração em `...\backup\backupsql.xml`.
-  - Destino `E:\BKPS` até 22/09, que era a letra do HD externo antes da migração. Em 24/09 o NVMe
-    pegou o E:, e o HD externo passou para G:. De 25/09 a 11/10, os logs não apontam para `BKPS`:
-    destino ou falha [VERIFICAR]. Em 13/10 foi reapontada para `G:\BKPS`.
-  - **Nenhum backup desde 17/10.** Em 20/10, o sistema atualizou o controle diário (08:09) e gerou
-    um log vazio (15:47). Causa: [VERIFICAR]. Se não aparecer nos logs, abrir chamado na IOB/Sage.
+  - É disparada pelo próprio sistema, e não por tarefa do Windows. Quase todo dia, quando o
+    sistema é aberto de manhã na estação **AC-LUCIANA**, ele grava um log
+    (`C:\Folhamatic\FolhaWin\backup\LOGS\LOG_BACKUP_RETORNO_*.XML`). Na maioria desses dias,
+    porém, **nada foi copiado**: sem destino, 0 arquivos, início e fim no mesmo segundo.
+  - Backups que de fato gravaram arquivos: 12/09, 15/09, 22 a 24/09, 13/10 e 16/10. Destino
+    `E:\BKPS` até 22/09, que era a letra do HD externo antes da migração (em 24/09 o NVMe pegou o
+    E:, e o HD externo passou para G:), e `G:\BKPS` desde 13/10. Configuração em
+    `...\backup\backupsql.xml`.
+  - Nada desde 16/10. O `CONTROLEDIARIO.XML` só registra os dias em que o sistema foi aberto
+    (19 e 20/10 incluídos).
+  - Quando e por que a rotina copia ou deixa de copiar depende do sistema da folha: abrir chamado
+    na IOB/Sage com estes dados (fora do escopo de consultoria do sistema).
 
 **Instalado (`instalar-backup-noturno.ps1`):**
 - Tarefa agendada **"Amparo - Backup noturno"**, todo dia às 23:00, como SYSTEM. Se o servidor
@@ -102,7 +106,7 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 ## Pendências
 
 - [ ] Conferir o resultado da primeira execução do backup noturno e das próximas duas noites.
-- [ ] Descobrir por que a rotina do sistema da folha parou em 16/10 (logs) ou abrir chamado na IOB/Sage.
+- [ ] Chamado na IOB/Sage: rotina de backup do sistema da folha quase nunca copia (só 13/10 e 16/10 em outubro).
 - [ ] Estender o D: no NVMe para ocupar os ~931 GB livres no fim do disco.
 - [ ] Bateria da placa-mãe e nobreak (o desligamento inesperado de 20/10 às 12:08 é o 11º desde 25/09).
 - [ ] Cópia fora do servidor: SSD antigo como destino rotativo e/ou nuvem.

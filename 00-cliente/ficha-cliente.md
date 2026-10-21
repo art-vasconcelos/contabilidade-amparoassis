@@ -38,7 +38,7 @@
 | Servidor | Dell OptiPlex · Windows 10 · disco NVMe 2 TB (migrado de SSD SATA 1 TB) |
 | Sistema da folha | Folhamatic FolhaWin (fora do escopo de consultoria; suporte só à infraestrutura) |
 | Banco de dados | PostgreSQL 10 · administrador dos bancos: usuário do fornecedor (`sageuser`) · usuário próprio do backup: `backup_amparo` (senha: [VER COFRE]) |
-| Backup | HD externo Seagate Expansion 2 TB (USB, letra G:, rótulo "Thaís"), ligado direto no servidor. Desde 20/10/2026: tarefa "Amparo - Backup noturno" às 23:00 (banco + pastas em `G:\Backup-Noturno`). A rotina do próprio sistema da folha (`G:\BKPs`) rodava quase todo dia de manhã e está parada desde 16/10. Ainda sem cópia fora do servidor. Cópia lenta (cerca de 0,8 GB/min) |
+| Backup | HD externo Seagate Expansion 2 TB (USB, letra G:, rótulo "Thaís"), ligado direto no servidor. Desde 20/10/2026: tarefa "Amparo - Backup noturno" às 23:00 (banco + pastas em `G:\Backup-Noturno`). A rotina do próprio sistema da folha (`G:\BKPs`, disparada pela estação AC-LUCIANA ao abrir o sistema) só copiou de fato em poucos dias, o último em 16/10. Ainda sem cópia fora do servidor. Cópia lenta (cerca de 0,8 GB/min) |
 | Estações | Cerca de 10 computadores, além do servidor |
 | Acesso remoto | AnyDesk · IDs [VER COFRE] |
 | Rede do servidor | IP fixo na placa, igual à reserva no roteador ER605 (endereços e acesso ao ER605: [VER COFRE]) · tipo de rede deve ser `Private` · a central de alarme Intelbras AMT 8000 também está na rede, com reserva própria |
