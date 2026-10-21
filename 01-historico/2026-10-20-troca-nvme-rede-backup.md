@@ -73,11 +73,16 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 
 **Situação encontrada:**
 - **Backup do Windows (`wbadmin`):** parado desde 09/11/2024.
-- **Rotina do próprio sistema da folha** (`G:\BKPs`, uma pasta por dia da semana): configurada
-  para `E:\BKPS` até 22/09. Na migração (24/09), o NVMe pegou a letra E: e o HD externo passou
-  para G:, e a rotina deixou de gravar no HD externo. Em 13/10 foi reapontada para `G:\BKPS`, mas
-  desde então só rodou em 13/10 e 16/10. Configuração: `C:\Folhamatic\FolhaWin\backup\backupsql.xml`
-  e logs em `...\backup\LOGS`. Reparo: [DEFINIR], por nós ou pelo suporte IOB/Sage.
+- **Rotina do próprio sistema da folha** (`G:\BKPs`, uma pasta por dia da semana, backup "online"
+  dos bancos da folha, contábil e fiscal):
+  - É disparada pelo próprio sistema, e não por tarefa do Windows. Rodou quase todo dia até 16/10,
+    em geral entre 07:15 e 08:30 (às vezes de madrugada ou ao meio-dia). Logs em
+    `C:\Folhamatic\FolhaWin\backup\LOGS`, configuração em `...\backup\backupsql.xml`.
+  - Destino `E:\BKPS` até 22/09, que era a letra do HD externo antes da migração. Em 24/09 o NVMe
+    pegou o E:, e o HD externo passou para G:. De 25/09 a 11/10, os logs não apontam para `BKPS`:
+    destino ou falha [VERIFICAR]. Em 13/10 foi reapontada para `G:\BKPS`.
+  - **Nenhum backup desde 17/10.** Em 20/10, o sistema atualizou o controle diário (08:09) e gerou
+    um log vazio (15:47). Causa: [VERIFICAR]. Se não aparecer nos logs, abrir chamado na IOB/Sage.
 
 **Instalado (`instalar-backup-noturno.ps1`):**
 - Tarefa agendada **"Amparo - Backup noturno"**, todo dia às 23:00, como SYSTEM. Se o servidor
@@ -97,7 +102,7 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 ## Pendências
 
 - [ ] Conferir o resultado da primeira execução do backup noturno e das próximas duas noites.
-- [ ] Reparar ou pedir ao suporte IOB/Sage o reparo da rotina de backup do sistema da folha.
+- [ ] Descobrir por que a rotina do sistema da folha parou em 16/10 (logs) ou abrir chamado na IOB/Sage.
 - [ ] Estender o D: no NVMe para ocupar os ~931 GB livres no fim do disco.
 - [ ] Bateria da placa-mãe e nobreak (o desligamento inesperado de 20/10 às 12:08 é o 11º desde 25/09).
 - [ ] Cópia fora do servidor: SSD antigo como destino rotativo e/ou nuvem.
