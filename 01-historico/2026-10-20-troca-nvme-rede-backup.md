@@ -12,10 +12,10 @@
 | Etapa | Horário | Duração |
 |---|---|---|
 | Presencial: rede, roteador, novo clone e troca para o NVMe | 17:30 – 19:30 | 2h00 |
-| Remoto: conferência, banco, backup conferido e instalação do backup noturno | 21:00 – [DEFINIR] | [DEFINIR] |
-| **Total** | | **[DEFINIR]** |
+| Remoto: conferência, banco, backup conferido e instalação do backup noturno | 21:00 – 22:30 | 1h30 |
+| **Total cobrado** | | **3h30 (R$ 175,00 a R$ 50/h)** |
 
-Início do trecho remoto estimado pelo checkup salvo às 21:15. Confirmar o horário final.
+Início do trecho remoto estimado pelo checkup salvo às 21:15. Deslocamento não incluso.
 
 ## 1. Computadores sem acesso ao servidor (rede)
 
@@ -113,3 +113,82 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 - [ ] Restringir no `pg_hba.conf` a regra `host all all all md5` à faixa da rede local.
 - [ ] Confirmar que a central de alarme mudou de endereço (lista de clientes do ER605).
 - [ ] Trocar a senha do ER605.
+
+---
+
+## Relatório para o cliente
+
+**Assunto:** Relatório de atendimento – 20/10 – Servidor no disco novo e backup automático
+
+Olá, Natalia, tudo bem?
+
+Segue o resumo do atendimento de ontem (20/10), presencial no fim da tarde e remoto à noite.
+
+**Computadores sem acesso ao servidor**
+O servidor desligou sozinho por volta do meio-dia e, ao religar, perdeu o "endereço" que usava na rede. Esse
+endereço tinha sido ocupado pela central do alarme, e os dois entraram em conflito. Deixei um endereço fixo
+reservado só para o servidor e outro para a central do alarme, então isso não se repete. Se a empresa do alarme
+comentar algo, vale conferir no aplicativo se a central continua online.
+
+**Servidor no disco novo**
+- Fiz uma nova cópia completa do disco antigo para o disco novo, já com o trabalho dos últimos dias.
+- O servidor passou a ligar pelo disco novo, como deveria ser desde a troca.
+- O disco antigo foi retirado da máquina, como o Angelo pediu, e deve ficar guardado com a etiqueta
+  "NÃO FORMATAR". Ele é a nossa cópia de emergência.
+- O banco de dados do sistema foi conferido por completo e está íntegro.
+
+**Backup automático**
+Analisando o servidor, encontrei duas situações:
+- O backup do Windows estava parado desde novembro de 2024;
+- O backup do próprio sistema da folha, que roda ao abrir o sistema de manhã, só copiou os dados de fato em
+  poucos dias. Em outubro, foram só dois.
+
+Por isso, deixei funcionando um **backup automático todas as noites, às 23h**: ele copia o banco de dados do
+sistema e as pastas da rede para o HD externo, guarda as cópias dos últimos dias e me avisa se der algum
+problema. A primeira cópia completa foi feita ontem à noite. Também fiz uma cópia avulsa do banco de dados
+antes de começar.
+
+Sobre o backup do sistema da folha: recomendo abrir um chamado com o suporte da IOB/Sage para que eles revisem
+a configuração. Segue um texto pronto, que pode ser enviado direto para eles:
+
+> A rotina de backup do sistema (Backup SGBD, destino `G:\BKPS`, código do escritório 20468) é disparada na
+> estação AC-LUCIANA ao abrir o sistema, mas na maioria dos dias o log termina sem destino e com 0 arquivos.
+> Em outubro, só houve cópia em 13/10 e 16/10. Podem verificar a configuração e o agendamento para que o
+> backup rode todos os dias? Obs.: em 24/09 o servidor trocou de disco e a letra do HD externo mudou de E: para G:.
+
+**Pontos de atenção**
+- O servidor desligou sozinho mais uma vez ontem ao meio-dia, a 11ª vez desde o fim de setembro. **O nobreak e
+  a troca da bateria da placa-mãe continuam sendo a prioridade.**
+- Ainda não existe nenhuma cópia fora do escritório. Num próximo passo, podemos falar sobre o backup em nuvem.
+- Recomendo trocar a senha do roteador, porque ela foi compartilhada por mensagem.
+
+**Tempo de atendimento**
+- Presencial: 17h30 às 19h30 (2h)
+- Remoto: 21h00 às 22h30 (1h30)
+- Total: 3h30 (R$ 50,00/h = R$ 175,00)
+
+Nos próximos dias, vou acompanhar se o backup noturno está rodando certinho.
+
+Qualquer dúvida, fico à disposição.
+
+Abraço,
+Artur Vasconcelos
+Analista de Sistemas e Engenheiro de Dados
+
+---
+
+## Mensagem para o WhatsApp
+
+Oi, Natalia! Passando o resumo de ontem 🙂
+
+✅ Computadores voltaram a acessar o servidor. A central do alarme tinha "pegado" o endereço dele na rede; agora cada um tem o seu fixo.
+✅ O servidor está ligando pelo disco novo. O disco antigo saiu da máquina: por favor, guardem com a etiqueta "NÃO FORMATAR", ele é a nossa cópia de emergência.
+✅ Banco de dados do sistema conferido: tudo íntegro.
+✅ Deixei um backup automático rodando toda noite às 23h, do sistema e das pastas da rede, no HD externo. Se der problema, eu recebo o aviso.
+
+⚠️ O backup do próprio sistema da folha quase não estava copiando nada. Mandei por e-mail um texto pronto para abrir chamado com a IOB/Sage.
+⚠️ O servidor desligou sozinho de novo ontem ao meio-dia. O nobreak e a bateria continuam urgentes.
+
+Se a empresa do alarme comentar alguma coisa, me avisa: a central mudou de endereço na rede.
+
+Mandei o relatório completo por e-mail.
