@@ -5,7 +5,7 @@
 | Início no SSD antigo | **24/09/2026 22:02**, na noite da migração (corrigido em 17/10; o diagnóstico de 16/10 apontava 06/10) |
 | Comunicado por | Natalia, em 11/10/2026 |
 | Atendimento | Remoto (AnyDesk) · presencial depois, para bateria e nobreak |
-| Status | 🟡 Em andamento: servidor ainda rodando pelo SSD antigo |
+| Status | 🟢 Servidor ligando pelo NVMe desde 20/10/2026, com o SSD antigo fora da máquina. Faltam bateria da placa-mãe e nobreak |
 | Horas | 11/10: [DEFINIR] · 16/10: 1h (ver `controle-de-horas.md`) |
 | Roteiro técnico | `02-tecnico/incidente-boot-ssd-antigo/roteiro.md` |
 
@@ -70,10 +70,10 @@ nobreak.
 | [DEFINIR] | Backup do banco em uso no HD externo G: (fase 0) | ⏳ |
 | 17/10/2026 | Leitura dos logs dos dois discos: NVMe parado desde 24/09; nada de 25/09 em diante ficou só nele. Acionar a IOB/Sage deixa de ser necessário, se a conferência confirmar | ✅ |
 | 17/10/2026 | Backup do banco e da pasta do sistema da folha no G: (sem falhas) e clone SSD antigo → NVMe, conferido arquivo por arquivo (`2026-10-17-backup-e-clonagem.md`) | ✅ |
-| [DEFINIR] | Visita: passar a ligar pelo NVMe com o SSD antigo desconectado e recuperar o acesso remoto | ⏳ |
+| 20/10/2026 | Visita: novo clone, SSD antigo retirado e boot pelo NVMe; acesso remoto funcionando (`2026-10-20-troca-nvme-rede-backup.md`) | ✅ |
 | [DEFINIR] | Cópia do que só existe no NVMe: banco (pasta data em E:) e arquivos de F: (fases 1 a 3) | ⏳ |
 | [DEFINIR] | Decisão sobre o banco do sistema da folha: refazer lançamentos ou acionar o fornecedor (fase 4) | ⏳ |
-| [DEFINIR] | Igualar os discos e criar a rotina noturna (fase 5) | ⏳ |
+| 20/10/2026 | Rotina noturna de backup (banco + pastas) no HD externo, tarefa agendada às 23:00 | ✅ |
 | [DEFINIR] | Bateria da placa-mãe e nobreak (fase 6). Em compra pelo escritório | ⏳ |
 
 ## Lições

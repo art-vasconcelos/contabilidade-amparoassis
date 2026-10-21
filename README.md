@@ -43,8 +43,9 @@ Material interno fica em **Markdown**.
 
 ## Próximos passos (retomar daqui)
 
-0. **Prioridade: incidente do SSD antigo.** Seguir `02-tecnico/incidente-boot-ssd-antigo/roteiro.md`
-   quando a Natalia liberar o servidor. Bateria da placa-mãe e nobreak estão em compra.
+0. **Servidor:** desde 20/10 ligando pelo NVMe, com backup noturno instalado. Conferir as primeiras
+   execuções do backup, reparar a rotina do sistema da folha e estender o D:. Pendências em
+   `01-historico/2026-10-20-troca-nvme-rede-backup.md`. Bateria da placa-mãe e nobreak estão em compra.
 1. Abrir o formulário no Excel e conferir o visual antes de enviar (a planilha não pôde ser
    aberta no ambiente onde foi gerada).
 2. Enviar os três e-mails, na ordem de `03-propostas/emails-de-envio.md`.
