@@ -111,7 +111,7 @@ perguntar, conferir no aplicativo da Intelbras se ela continua online.
 - [ ] Bateria da placa-mãe e nobreak (o desligamento inesperado de 20/10 às 12:08 é o 11º desde 25/09).
 - [ ] Cópia fora do servidor: SSD antigo como destino rotativo e/ou nuvem.
 - [ ] Restringir no `pg_hba.conf` a regra `host all all all md5` à faixa da rede local.
-- [ ] Confirmar que a central de alarme mudou de endereço (lista de clientes do ER605).
+- [x] Confirmar que a central de alarme mudou de endereço (lista de clientes do ER605): confirmado em 22/10.
 - [ ] Trocar a senha do ER605.
 
 ---

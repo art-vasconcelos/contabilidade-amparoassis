@@ -12,4 +12,5 @@ desta pasta.
 | 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 | R$ 50,00 | Enviado 17/10 | [VERIFICAR] |
 | 17/10 | Backup e clonagem SATA → NVMe (`2026-10-17-backup-e-clonagem.md`) · 15:30 às 20:00 | 4h30 | R$ 225,00 | Rascunho pronto | [VERIFICAR] |
 | 20/10 | Rede, troca para o NVMe e backup noturno (`2026-10-20-troca-nvme-rede-backup.md`) · presencial 17:30 às 19:30 + remoto 21:00 às 22:30 | 3h30 | R$ 175,00 | Rascunho pronto | [VERIFICAR] |
-| | **Total lançado (sem 11/10)** | **14h00** | **R$ 700,00** | | |
+| 22/10 | Computadores sem internet (`2026-10-22-computadores-sem-internet.md`) · remoto por telefone | 2h00 [CONFIRMAR] | R$ 100,00 | Rascunho pronto | [VERIFICAR] |
+| | **Total lançado (sem 11/10)** | **16h00** | **R$ 800,00** | | |
