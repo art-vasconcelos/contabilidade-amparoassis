@@ -11,8 +11,8 @@ investigação
 
 | Etapa | Horário | Duração |
 |---|---|---|
-| Diagnóstico e correção por telefone | [CONFIRMAR] (manhã, a partir de cerca de 10:00) | cerca de 2h00 |
-| **Total cobrado** | | **2h00 (R$ 100,00 a R$ 50/h)** [CONFIRMAR] |
+| Diagnóstico e correção por telefone | manhã | 2h00 |
+| **Total cobrado** | | **2h00 (R$ 100,00 a R$ 50/h)** · confirmado pelo Artur |
 
 ## Sintoma
 
@@ -84,9 +84,9 @@ testa a cada 30 segundos placa → roteador → ONT → internet → DNS, e regi
 
 **Assunto:** Relatório de atendimento – 22/10 – Computadores sem internet
 
-Olá, Natalia, tudo bem?
+Bom dia, Natália, tudo bem?
 
-Segue o resumo do atendimento de quarta-feira (22/10), feito por telefone com vocês no escritório.
+Segue o resumo do atendimento de quinta-feira (22/10), feito por telefone com vocês no escritório.
 
 **O que aconteceu**
 Os computadores acessavam as pastas do servidor, mas alguns não conseguiam navegar na internet.
@@ -103,9 +103,9 @@ deixa de "responder" a essas máquinas: a rede interna continua funcionando, mas
 
 **Ponto de atenção**
 Depois disso, vocês perceberam de novo quedas de internet que vêm e voltam sozinhas, afetando
-também o servidor e o alarme. Como a causa parece ser outra, vou instalar no servidor uma
+também o servidor e o alarme. Como a causa parece ser outra, vou deixar no servidor uma
 ferramenta que fica testando a conexão o tempo todo e registra cada queda: a hora, quanto tempo
-durou e em que ponto a conexão quebrou (no roteador, no aparelho da operadora ou na própria
+durou e em que ponto a conexão caiu (no roteador, no aparelho da operadora ou na própria
 internet). Com esse registro, a gente para de tentar adivinhar e corrige a causa certa.
 
 Uma das suspeitas é energia: o servidor já desligou sozinho várias vezes, e o roteador e o
@@ -113,20 +113,27 @@ aparelho da operadora também não estão no nobreak. **Quando o nobreak chegar,
 também.**
 
 **Tempo de atendimento**
-- Remoto (por telefone): cerca de 2h
+- Remoto (por telefone): 2h
 - Total: 2h (R$ 50,00/h = R$ 100,00)
+
+**Valores em aberto**
+Conferindo meus recebimentos, não encontrei o pagamento do atendimento de 20/10 (servidor no
+disco novo e backup automático), de R$ 175,00. Se já tiver feito, me avisa que eu confiro de novo.
+
+- 20/10 – Servidor no disco novo e backup automático: R$ 175,00
+- 22/10 – Computadores sem internet: R$ 100,00
+- **Total: R$ 275,00**
 
 Qualquer dúvida, fico à disposição.
 
-Abraço,
+Atenciosamente,
 Artur Vasconcelos
-Analista de Sistemas e Engenheiro de Dados
 
 ---
 
 ## Mensagem para o WhatsApp
 
-Oi, Natalia! Resumo do atendimento de quarta (22/10) 🙂
+Oi, Natalia! Resumo do atendimento de quinta (22/10) 🙂
 
 ✅ Achamos a causa dos computadores sem internet: duas máquinas estavam com o endereço de rede configurado na mão, diferente do que o roteador tinha registrado. Deixei as duas no automático, com o endereço reservado no roteador, e reiniciamos.
 

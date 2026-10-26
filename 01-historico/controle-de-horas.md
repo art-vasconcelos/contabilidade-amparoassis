@@ -16,7 +16,7 @@ desta pasta.
 | 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 | R$ 50,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
 | 17/10 | Backup e clonagem SATA → NVMe (`2026-10-17-backup-e-clonagem.md`) · 15:30 às 20:00 | 4h30 | R$ 225,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
 | 20/10 | Rede, troca para o NVMe e backup noturno (`2026-10-20-troca-nvme-rede-backup.md`) · presencial 17:30 às 19:30 + remoto 21:00 às 22:30 | 3h30 | R$ 175,00 | Enviado 20/10 | ⏳ **Em aberto** (relatório enviado 20/10, depois do último Pix) |
-| 22/10 | Computadores sem internet (`2026-10-22-computadores-sem-internet.md`) · remoto por telefone | 2h00 [CONFIRMAR] | R$ 100,00 | Rascunho pronto, não enviado | ⏳ Não cobrado |
+| 22/10 | Computadores sem internet (`2026-10-22-computadores-sem-internet.md`) · remoto por telefone | 2h00 | R$ 100,00 | Rascunho pronto (com lembrete do 20/10), não enviado | ⏳ Não cobrado |
 
 ## Pagamentos recebidos (extrato do Artur, conferido em 26/10/2026)
 
@@ -33,6 +33,6 @@ desta pasta.
 | Atendimento | Valor | Situação |
 |---|---|---|
 | 20/10 – Rede, troca para o NVMe e backup noturno | R$ 175,00 | Relatório enviado em 20/10, sem pagamento |
-| 22/10 – Computadores sem internet | R$ 100,00 [CONFIRMAR horas] | Relatório não enviado |
+| 22/10 – Computadores sem internet | R$ 100,00 | Relatório pronto, não enviado |
 | 11/10 – Incidente SSD antigo (tentativa de boot + roteiro) | [DEFINIR] | Não cobrado |
 | **Total a receber (sem 11/10)** | **R$ 275,00** | |
