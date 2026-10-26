@@ -28,6 +28,7 @@
   suporte para o Artur por proximidade e para evitar custo de deslocamento.
 - A Natalia pretende repassar serviços do Artur para os clientes dela: sites, análise de dados
   e aplicativos. Nos documentos, não tratar esses clientes como "pequenos comércios".
+- Automação (áudio da Natalia, 26/10): pretendem fazer, sem data, depois que pararem as quedas de energia.
 - Interesse atual: automatizar processos da contabilidade usando agentes de IA ou automações
   mais simples (n8n, rotinas na própria máquina).
 
@@ -38,7 +39,7 @@
 | Servidor | Dell OptiPlex 3080 Micro · Windows 10 · disco NVMe 2 TB (migrado de SSD SATA 1 TB) |
 | Sistema da folha | Folhamatic FolhaWin (fora do escopo de consultoria; suporte só à infraestrutura) |
 | Banco de dados | PostgreSQL 10 · administrador dos bancos: usuário do fornecedor (`sageuser`) · usuário próprio do backup: `backup_amparo` (senha: [VER COFRE]) |
-| Nobreak | Antigo: NHS Compact Plus III 1200 VA (instalado temporariamente em 30/09 [VERIFICAR] se segue ligado) · novo: SMS Gamer 2000 VA, comprado, instalação [VERIFICAR] · detalhes em `01-historico/2026-09-29-nobreak.md` |
+| Nobreak | Antigo: NHS Compact Plus III 1200 VA (instalado temporariamente em 30/09 [VERIFICAR] se segue ligado) · novo indicado: SMS Gamer 2000 VA, **ainda não comprado** (26/10) · detalhes em `01-historico/2026-09-29-nobreak.md` |
 | Backup | HD externo Seagate Expansion 2 TB (USB, letra G:, rótulo "Thaís"), ligado direto no servidor. Desde 20/10/2026: tarefa "Amparo - Backup noturno" às 23:00 (banco + pastas em `G:\Backup-Noturno`). A rotina do próprio sistema da folha (`G:\BKPs`, disparada pela estação AC-LUCIANA ao abrir o sistema) só copiou de fato em poucos dias, o último em 16/10. Ainda sem cópia fora do servidor. Cópia lenta (cerca de 0,8 GB/min) |
 | Estações | Cerca de 10 computadores, além do servidor |
 | Acesso remoto | AnyDesk · IDs [VER COFRE] |
