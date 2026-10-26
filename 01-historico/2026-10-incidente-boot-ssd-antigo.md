@@ -6,7 +6,7 @@
 | Comunicado por | Natalia, em 11/10/2026 |
 | Atendimento | Remoto (AnyDesk) · presencial depois, para bateria e nobreak |
 | Status | 🟢 Servidor ligando pelo NVMe desde 20/10/2026, com o SSD antigo fora da máquina. Faltam bateria da placa-mãe e nobreak |
-| Horas | 11/10: [DEFINIR] · 16/10: 1h (ver `controle-de-horas.md`) |
+| Horas | 11/10: sem custo · 16/10: 1h (ver `controle-de-horas.md`) |
 | Roteiro técnico | `02-tecnico/incidente-boot-ssd-antigo/roteiro.md` |
 
 ## O que aconteceu

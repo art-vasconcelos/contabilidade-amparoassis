@@ -11,7 +11,7 @@ desta pasta.
 | 25/09 | Banco não subia após a migração (mesmo arquivo) · horários quebrados | 1h00 | R$ 50,00 | Enviado 25/09 | ✅ Pago 25/09 (junto com 24/09) |
 | 29/09 | Revisão do nobreak (`2026-09-29-nobreak.md`) | 3h00 | R$ 150,00 | Enviado 29/09 com total errado (R$ 50,00), corrigido depois pelo Artur | ✅ Pago 29/09 (R$ 150,00) |
 | 30/09 | Instalação temporária do nobreak antigo | — | sem custo | No e-mail de 29/09 | — |
-| 11/10 | Incidente SSD antigo: tentativa de boot pelo NVMe + roteiro e scripts | [DEFINIR] | [DEFINIR] | Não enviado | ⏳ Não cobrado |
+| 11/10 | Incidente SSD antigo: tentativa de boot pelo NVMe + roteiro e scripts | — | sem custo (decisão do Artur) | Não enviado | — |
 | 13/10 | Sem navegação, DNS do ER605 (`2026-10-13-sem-internet-dns-er605.md`) | 2h00 | R$ 100,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
 | 16/10 | Computadores sem acesso às pastas (`2026-10-16-computadores-sem-acesso-pastas.md`) | 1h00 | R$ 50,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
 | 17/10 | Backup e clonagem SATA → NVMe (`2026-10-17-backup-e-clonagem.md`) · 15:30 às 20:00 | 4h30 | R$ 225,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
@@ -34,5 +34,4 @@ desta pasta.
 |---|---|---|
 | 20/10 – Rede, troca para o NVMe e backup noturno | R$ 175,00 | Relatório enviado em 20/10, sem pagamento |
 | 22/10 – Computadores sem internet | R$ 100,00 | Relatório pronto, não enviado |
-| 11/10 – Incidente SSD antigo (tentativa de boot + roteiro) | [DEFINIR] | Não cobrado |
-| **Total a receber (sem 11/10)** | **R$ 275,00** | |
+| **Total a receber** | **R$ 275,00** | |
