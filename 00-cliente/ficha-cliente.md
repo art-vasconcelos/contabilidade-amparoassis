@@ -8,7 +8,7 @@
 | Ramo | Escritório de contabilidade |
 | Região | São Roque/SP e região |
 | Contato principal | Natalia |
-| Início do relacionamento | [DEFINIR] |
+| Início do relacionamento | 18/09/2026 (primeiro atendimento registrado) |
 
 ## Condições combinadas
 
