@@ -17,6 +17,7 @@ desta pasta.
 | 17/10 | Backup e clonagem SATA → NVMe (`2026-10-17-backup-e-clonagem.md`) · 15:30 às 20:00 | 4h30 | R$ 225,00 | Enviado 17/10 | ✅ Pago 19/10 (pacote de R$ 375,00) |
 | 20/10 | Rede, troca para o NVMe e backup noturno (`2026-10-20-troca-nvme-rede-backup.md`) · presencial 17:30 às 19:30 + remoto 21:00 às 22:30 | 3h30 | R$ 175,00 | Enviado 20/10 | ⏳ **Em aberto** (relatório enviado 20/10, depois do último Pix) |
 | 22/10 | Computadores sem internet (`2026-10-22-computadores-sem-internet.md`) · remoto por telefone | 2h00 | R$ 100,00 | Rascunho pronto (com lembrete do 20/10), não enviado | ⏳ Não cobrado |
+| 27/10 | Servidor não ligava, nobreak errado, gateway duplicado, contábil (`2026-10-27-servidor-nao-liga-gateway-duplicado.md`) · presencial 10:30 às 13:30 + remoto [DEFINIR] | 3h00 + [DEFINIR] | R$ 150,00 + [DEFINIR] | Não enviado | ⏳ Não cobrado |
 
 ## Pagamentos recebidos (extrato do Artur, conferido em 26/10/2026)
 
@@ -34,4 +35,5 @@ desta pasta.
 |---|---|---|
 | 20/10 – Rede, troca para o NVMe e backup noturno | R$ 175,00 | Relatório enviado em 20/10, sem pagamento |
 | 22/10 – Computadores sem internet | R$ 100,00 | Relatório pronto, não enviado |
-| **Total a receber** | **R$ 275,00** | |
+| 27/10 – Atendimento presencial (3h) + remoto | R$ 150,00 + [DEFINIR] | Relatório não enviado |
+| **Total a receber** | **R$ 425,00 + remoto de 27/10** | |

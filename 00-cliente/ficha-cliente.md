@@ -39,11 +39,11 @@
 | Servidor | Dell OptiPlex 3080 Micro · Windows 10 · disco NVMe 2 TB (migrado de SSD SATA 1 TB) |
 | Sistema da folha | Folhamatic FolhaWin (fora do escopo de consultoria; suporte só à infraestrutura) |
 | Banco de dados | PostgreSQL 10 · administrador dos bancos: usuário do fornecedor (`sageuser`) · usuário próprio do backup: `backup_amparo` (senha: [VER COFRE]) |
-| Nobreak | Antigo: NHS Compact Plus III 1200 VA (instalado temporariamente em 30/09 [VERIFICAR] se segue ligado) · novo indicado: SMS Gamer 2000 VA, **ainda não comprado** (26/10) · detalhes em `01-historico/2026-09-29-nobreak.md` |
+| Nobreak | NHS Compact Plus III 1200 VA ligado no servidor em 27/10 (antes estava num nobreak menor, inadequado) · novo: SMS Gamer 2000 VA, compra decidida em 27/10 · detalhes em `01-historico/2026-09-29-nobreak.md` |
 | Backup | HD externo Seagate Expansion 2 TB (USB, letra G:, rótulo "Thaís"), ligado direto no servidor. Desde 20/10/2026: tarefa "Amparo - Backup noturno" às 23:00 (banco + pastas em `G:\Backup-Noturno`). A rotina do próprio sistema da folha (`G:\BKPs`, disparada pela estação AC-LUCIANA ao abrir o sistema) só copiou de fato em poucos dias, o último em 16/10. Ainda sem cópia fora do servidor. Cópia lenta (cerca de 0,8 GB/min) |
 | Estações | Cerca de 10 computadores, além do servidor |
 | Acesso remoto | AnyDesk · IDs [VER COFRE] |
-| Rede do servidor | IP fixo na placa, igual à reserva no roteador ER605 (endereços e acesso ao ER605: [VER COFRE]) · tipo de rede deve ser `Private` · a central de alarme Intelbras AMT 8000 também está na rede, com reserva própria |
+| Rede do servidor | DHCP com reserva no ER605 (desde 27/10 no `.200`; acesso ao ER605: [VER COFRE]) · entrada ARP permanente do gateway para o MAC do ER605, paliativa enquanto houver outro aparelho com o endereço do roteador (ver `01-historico/2026-10-27-servidor-nao-liga-gateway-duplicado.md`) · tipo de rede deve ser `Private` · a central de alarme Intelbras AMT 8000 também está na rede, com reserva própria |
 | Sistema operacional | Barra de tarefas aparenta Windows 11: confirmar com `winver` [VERIFICAR] |
 
 ## Riscos já identificados

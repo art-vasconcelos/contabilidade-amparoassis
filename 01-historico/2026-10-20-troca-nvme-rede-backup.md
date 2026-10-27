@@ -32,7 +32,7 @@ servidor tentou voltar ao endereço antigo, houve conflito e ele ficou sem rede.
 - Reservas de endereço no ER605: uma para o servidor e uma para a central de alarme, que vai
   trocar de endereço sozinha quando renovar o aluguel do IP. Nenhum redirecionamento de porta
   apontava para a central (Virtual Servers vazio).
-- **IP fixo configurado na placa do servidor**, igual à reserva (endereços: [VER COFRE]), com o
+- **IP fixo configurado na placa do servidor**, igual à reserva (correção de 27/10: na prática o servidor estava em DHCP com reserva; desde 27/10 a reserva é o `.200`) (endereços: [VER COFRE]), com o
   roteador e um DNS público como servidores de DNS.
 - Os computadores acessam o servidor pelo nome, então não foi preciso remapear unidades.
 - O reset do ER605 de 13/10 já tinha mudado a faixa da rede, o que confirma que os mapeamentos
