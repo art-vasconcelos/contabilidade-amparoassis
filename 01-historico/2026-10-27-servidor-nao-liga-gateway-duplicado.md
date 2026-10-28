@@ -85,3 +85,57 @@ disputam o endereço. [VERIFICAR] qual aparelho tem o MAC `50-91-E3-3F-00-51`.
 - [ ] Trocar a bateria CR2032 do servidor e conferir na BIOS: AHCI, data, boot pelo NVMe.
 - [ ] Nobreak SMS 2000 VA com servidor, ER605, aparelho da operadora e switch.
 - [ ] Remover `192.168.0.200` como IP extra, se tiver sobrado algum registro manual (o atual vem do DHCP).
+
+---
+
+## Relatório para o cliente (atendimento presencial)
+
+**Assunto:** Relatório de atendimento – 27/10 – Servidor, energia e internet
+
+Bom dia, Natália, tudo bem?
+
+Segue o resumo do atendimento presencial de ontem (27/10).
+
+**Nobreak**
+Ao chegar, vi que o servidor não estava ligado no nobreak que revisamos em setembro, e sim num
+nobreak bem menor, que não aguenta a carga. Troquei pelo nobreak correto. Isso pode explicar boa parte
+dos desligamentos que o servidor vinha tendo.
+
+**Servidor não ligava**
+- Depois dos desligamentos, a placa do servidor perdeu a configuração de novo (mesmo caso de setembro),
+  e o Windows não conseguia iniciar.
+- Corrigi a configuração e o servidor voltou a funcionar normalmente.
+- A data e a hora do servidor também tinham voltado ao padrão, e foram acertadas.
+- A causa é a pilha da placa-mãe, que está fraca. **A troca dela é urgente**: enquanto isso não for
+  feito, qualquer queda de energia pode deixar o servidor sem ligar de novo.
+
+**Servidor sem internet**
+- Depois de ligado, o servidor não conseguia acessar a internet, embora os outros computadores
+  conseguissem acessar as pastas dele normalmente.
+- Encontrei a causa: **há um segundo aparelho na rede usando o mesmo endereço do roteador principal**,
+  provavelmente o roteador do Wi-Fi. Cada computador "conversa" com um dos dois, e quem cai no aparelho
+  errado fica sem internet. Isso explica as quedas do tipo "uns computadores funcionam e outros não"
+  das últimas semanas.
+- Ajustei o servidor para usar sempre o roteador correto, e a internet voltou. Em seguida, a máquina da
+  Débora foi ajustada da mesma forma.
+- Para resolver de vez, falta configurar esse segundo aparelho. Até lá, se outro computador ficar sem
+  internet, me avise que eu ajusto na hora.
+
+**Sistema contábil**
+O módulo contábil apresentou erro ao abrir, provavelmente por arquivos danificados nos desligamentos.
+A Folha e a Escrita Fiscal estão funcionando. Sigo acompanhando junto com o Ângelo e, se necessário,
+com o suporte da IOB.
+
+**Próximos passos**
+1. Trocar a pilha da placa-mãe do servidor (urgente e de baixo custo).
+2. Instalar o nobreak novo, ligando nele também o roteador e o aparelho da operadora de internet.
+3. Configurar o segundo aparelho da rede para acabar com o conflito.
+
+**Tempo de atendimento**
+- Presencial: 10h30 às 13h30 (3h)
+- Total: 3h (R$ 50,00/h = R$ 150,00)
+
+Qualquer dúvida, fico à disposição.
+
+Atenciosamente,
+Artur Vasconcelos
